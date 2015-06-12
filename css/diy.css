@@ -1,0 +1,82 @@
+@font-face {
+	font-family: PinyonScriptRegular;
+	src: url('../font/PinyonScript-Regular.ttf');
+}
+
+@font-face {
+	font-family: "Ubuntu Regular";
+	src: url("../font/Ubuntu-Regular.ttf");
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 62.5%;
+}
+
+header #avatar {
+	position: absolute;
+	width: 15rem;
+	height: 15rem;
+	left: 50%;
+	top: 35%;
+	margin-left: -7.5rem;
+}
+
+header #avatar a img {
+	display: inline-block;
+	width: 15rem;
+	height: 15rem;
+	border-radius: 7.5rem;
+}
+
+#author {
+	position: absolute;
+	top: 5rem;
+	width: 100%;
+}
+
+#author h1 {
+	text-align: center;
+	font-family: "Ubuntu Regular";
+	font-size: 1.8rem;
+}
+
+#author h1 a {
+	text-decoration: none;
+	color: #4F5359;
+}
+
+
+#author h2 {
+	text-align: center;
+}
+
+header nav.animated {
+	position: fixed;
+	top: 1rem;
+	width: 100%;
+	text-align: center;
+	
+}
+
+header nav.animated ul {
+	text-decoration: none;
+}
+
+header nav.animated ul li {
+	display: inline-block;
+	margin-left: 4rem;
+}
+
+header nav.animated ul li:nth-child(1) {
+	margin-left: 0;
+}
+
+header nav.animated ul li a {
+	text-decoration: none;
+}
+
+#container {
+	display: none;
+}

@@ -4,12 +4,16 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hello World | YangShaoyue</title>
+    <title>HTML标签 | YangShaoyue</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="YangShaoyue">
     
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+    <meta name="description" content="action属性：规定当提交表单时，向何处发送表单数据
+type=”radio”定义单选按钮
+for属性：规定label与哪个表单元素绑定
+name属性：规定input元素的名称
+name属性用于对提交服务器后的表单数据进行标识，或者在客户端通过JavaScript引用表单数据只有设置了name属性">
     
     
     
@@ -65,15 +69,15 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/06/11/hello-world/" title="Hello World" itemprop="url">Hello World</a>
+      <a href="/2015/06/12/HTML标签/" title="HTML标签" itemprop="url">HTML标签</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://yoursite.com" title="YangShaoyue">YangShaoyue</a>
     </p>
   <p class="article-time">
-    <time datetime="2015-06-11T02:21:12.729Z" itemprop="datePublished">2015-06-11</time>
-    更新日期:<time datetime="2015-06-11T02:21:12.729Z" itemprop="dateModified">2015-06-11</time>
+    <time datetime="2015-06-12T01:44:47.000Z" itemprop="datePublished">2015-06-12</time>
+    更新日期:<time datetime="2015-06-12T09:10:18.153Z" itemprop="dateModified">2015-06-12</time>
     
   </p>
 </header>
@@ -82,28 +86,31 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目錄</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick_Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create_a_new_post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run_server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate_static_files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy_to_remote_sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+		
 		</div>
 		
-		<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+		<p>action属性：规定当提交表单时，向何处发送表单数据</p>
+<p>type=”radio”定义单选按钮</p>
+<p>for属性：规定label与哪个表单元素绑定</p>
+<p>name属性：规定input元素的名称</p>
+<p>name属性用于对提交服务器后的表单数据进行标识，或者在客户端通过JavaScript引用表单数据<br>只有设置了name属性的表单元素才能在提交表单时传递他们的值</p>
+<p>标签无法被点击的情况：（href属性存在）</p>
+<p>因为标签被覆盖，标签下方有通过position:absolute进行绝对定位的元素，父元素（position: relative）包括此标签，并且进行绝对定位时使用的是padding-left、padding-top…应用left，top调整位置。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/html/">html</a>
+  </div>
 
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2015/06/11/hello-world/" data-title="Hello World | YangShaoyue" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2015/06/12/HTML标签/" data-title="HTML标签 | YangShaoyue" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -113,13 +120,21 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2015/06/12/示例文章3/" title="示例文章3">
+ <a href="/2015/06/12/CSS属性/" title="CSS属性">
   <strong>PREVIOUS:</strong><br/>
   <span>
-  示例文章3</span>
+  CSS属性</span>
 </a>
 </div>
 
+
+<div class="next">
+<a href="/2015/06/12/Hello-World-0/"  title="Hello World">
+ <strong>NEXT:</strong><br/> 
+ <span>Hello World
+</span>
+</a>
+</div>
 
 </nav>
 
@@ -129,7 +144,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick_Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create_a_new_post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run_server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate_static_files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy_to_remote_sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+  
   </div>
 
 </div>
