@@ -44,12 +44,13 @@ header #avatar a img {
 
 #author h1 a {
 	text-decoration: none;
-	color: #4F5359;
+	color: #6B7178;
 }
 
 
 #author h2 {
 	text-align: center;
+	color: #979DA6;
 }
 
 header nav.animated {
@@ -79,4 +80,39 @@ header nav.animated ul li a {
 
 #container {
 	display: none;
+}
+
+footer #footer .social-font {
+	position: relative;
+	width: 15rem;
+	height: 2.5rem;
+	top: 31rem;
+	left: 35rem;
+}
+
+footer #footer .social-font a {
+	position: absolute;
+}
+
+footer #footer .social-font a[title="github"] {
+	left: 1rem;
+}
+
+footer #footer .social-font a[title="google"] {
+	left: 6.5rem;
+}
+
+footer #footer .social-font a[title="wechat"] {
+	right: 1rem;
+}
+
+footer #footer .social-font a {
+	font-size: 2rem;
+	color: #4F5359;
+}
+
+footer #footer p.copyright {
+	position: absolute;
+	left: 30rem;
+	bottom: 2rem;
 }
