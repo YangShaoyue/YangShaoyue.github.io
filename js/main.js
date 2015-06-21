@@ -52,30 +52,27 @@ $(document).ready(function() {
 	});
 
 	// 导航栏被点击时，改变导航栏颜色
-	$("nav#nav-bar ul li a").click(function() {
-		$(this).css("color", "#f77e75");
+	// $("nav#nav-bar ul li a").click(function() {
+	// 	$(this).css("color", "#f77e75");
 
-		// 判断被点击元素的兄弟元素是否被点击过（即颜色是否改变）
-		var prev = $(this).parent().prev();
-		var next = $(this).parent().next();
-		for (var i=0, len=$("ul li a").length - 1; i < len; i++) {
-			// jquery css()方法获取的是rgb格式的颜色
-			if (prev.children("a").css("color") == "rgb(247, 126, 117)") {
-				prev.children("a").css("color", "#6D727A");
-			} else {
-				prev = prev.prev();
-			}
+	// 	// 判断被点击元素的兄弟元素是否被点击过（即颜色是否改变）
+	// 	var prev = $(this).parent().prev();
+	// 	var next = $(this).parent().next();
+	// 	for (var i=0, len=$("ul li a").length - 1; i < len; i++) {
+	// 		// jquery css()方法获取的是rgb格式的颜色
+	// 		if (prev.children("a").css("color") == "rgb(247, 126, 117)") {
+	// 			prev.children("a").css("color", "#6D727A");
+	// 		} else {
+	// 			prev = prev.prev();
+	// 		}
 			
-			if (next.children("a").css("color") == "rgb(247, 126, 117)") {
-				next.children("a").css("color", "#6D727A");
-			} else {
-				next = next.next();
-			}
-		}
-	});
-
-
-	
+	// 		if (next.children("a").css("color") == "rgb(247, 126, 117)") {
+	// 			next.children("a").css("color", "#6D727A");
+	// 		} else {
+	// 			next = next.next();
+	// 		}
+	// 	}
+	// });
 });
 
 /*
@@ -98,14 +95,14 @@ function wasTriggered() {
 }
 wasTriggered();
 
-function antiHighlight() {
-	$("#nav-bar").find('a').each(function() {
-		$(this).css("color", "#6D727A");
-	});
-}
+// function antiHighlight() {
+// 	$("#nav-bar").find('a').each(function() {
+// 		$(this).css("color", "#6D727A");
+// 	});
+// }
 
-$("#main section a h1").click(function() {
-	antiHighlight();
-});
+// $("#main section a h1").click(function() {
+// 	antiHighlight();
+// });
 
 $(document).pjax('a[data-pjax]', '#container', { fragment: '#container', timeout: 10000 });

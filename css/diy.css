@@ -4,8 +4,13 @@
 }
 
 @font-face {
-	font-family: "Ubuntu Regular";
-	src: url("../font/Ubuntu-Regular.ttf");
+	font-family: "Roboto Regular";
+	src: url('../font/Roboto-Regular.ttf');
+}
+
+@font-face {
+	font-family: "MerriweatherSans Regular";
+	src: url('../font/MerriweatherSans-Regular.ttf');
 }
 
 body {
@@ -44,7 +49,7 @@ header #avatar a img {
 
 #author h1 {
 	text-align: center;
-	font-family: "Ubuntu Regular";
+	font-family: "MerriweatherSans Regular";
 	font-size: 1.8rem;
 }
 
@@ -55,7 +60,7 @@ header #avatar a img {
 
 
 #author h2 {
-	font-family: "Ubuntu Regular";
+	font-family: "MerriweatherSans Regular";
 	text-align: center;
 	color: #979DA6;
 }
@@ -65,7 +70,7 @@ header nav#nav-bar {
 	top: 0;
 	width: 100%;
 	height: 3.6rem;
-	font-family: "Ubuntu Regular";
+	font-family: "MerriweatherSans Regular";
 	font-size: 0.9rem;
 	font-weight: 600;
 	background: #DBDBDB; /* #DBDBDB */
@@ -159,7 +164,7 @@ header .social-font a {
 
 #container #main section {
 	position: relative;
-	font-family: "Ubuntu Regular", '微软雅黑';
+	font-family: "MerriweatherSans Regular", '微软雅黑';
 	margin-bottom: 4rem;
 }
 
@@ -178,7 +183,7 @@ header .social-font a {
 }
 
 #container #main section div.excerpt {
-	font-family: '微软雅黑';
+	font-family: "Roboto Regular", '微软雅黑';
 	font-size: 0.9rem;
 	color: #646A70;
 	line-height: 22px;
@@ -246,20 +251,20 @@ header .social-font a {
 
 	/* single article */
 #container #main article header h1 {
-	font-family: "Ubuntu Regular", '微软雅黑';
+	font-family: "MerriweatherSans Regular", '微软雅黑';
 	font-size: 1.7rem;
 	font-weight: normal;
 	color: #4F5359;
 }
 
 #container #main article header p {
-	font-family: "Ubuntu Regular", '微软雅黑';
+	font-family: "MerriweatherSans Regular", '微软雅黑';
 	color: #A2A9B2;
 	font-size: 0.7rem;
 }
 
 #container #main article .article-content p {
-	font-family: '微软雅黑';
+	font-family: "Roboto Regular", '微软雅黑';
 	font-size: 1rem;
 	color: #646A70;
 	line-height: 26px;
@@ -318,7 +323,7 @@ footer {
 
 footer #footer p.copyright {
 	display: inline-block;
-	font-family: "Ubuntu Regular";
+	font-family: "MerriweatherSans Regular";
 	font-size: 0.7rem;
 	color: #898E96;
 }
@@ -426,7 +431,7 @@ header .social-font a[title="wechat"] {
 	/* footer animation */
 footer.footer-animation1 {
 	position: fixed;
-	right: -22rem;
+	right: -23rem;
 	bottom: 0;
 	width: auto;
 	-webkit-transition: right 1s;
@@ -436,5 +441,3 @@ footer.footer-animation1 {
 footer.footer-animation2 {
 	right: 2.5rem;
 }
-
-/* pjax fadeIn fadeOut */
