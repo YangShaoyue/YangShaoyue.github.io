@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>示例文章3 | Yang Shaoyue</title>
+    <title>jQuery中attr和prop方法的区别 | Yang Shaoyue</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="Yang Shaoyue">
     
-    <meta name="description" content="Je suis passionné par la photo depuis l’âge de trois ans, âge auquel je mangeai les trois-quart du Minolta de mon paternel avant que ma mère ne dusse ">
+    <meta name="description" content="大家都知道有的浏览器只要写disabled，checked就可以了，而有的要写成disabled = “disabled”，checked=”checked”，比如用attr(“checked”)获取checkbox的checked属性时选中的时候可以取到值,值为”checked”但没选中获取值就是undefined。jq提供新的方法“prop”来获取这些属性，就是来解决这个问题的，以前我们使用attr获取checked属性时返回”checked”和””,现在使用prop方法获取属性则统一返回true和false。">
     
-    
+    <meta name="keywords" content="library">
     
     
     
@@ -27,33 +27,46 @@
 
   <body>
     <header>
-      <div>
+      <div id="all-articles">
+	<i class="fa fa-bell-o"></i>	
+</div>
+<div>
 		
 			<div id="avatar">
 				<a href="/"><img src="/img/me.jpg" alt="Yang Shaoyue" title="Yang Shaoyue"/></a>
+				<a href="/"><img src="/img/avatar.jpg" alt="Yang Shaoyue" title="Yang Shaoyue"/></a>
 			</div>
 			
 			<div id="author">
 				<h1 class="site-name"><a href="/" title="Yang Shaoyue">Yang Shaoyue</a></h1>
 				<h2 class="blog-motto">no path but through</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單"></a></div>
-			<nav class="animated">
+			<div class="social-wrapper">
+				<div class="social-font clearfix">
+					
+					<a href="https://github.com/YangShaoyue" target="_blank" title="github"><i class="fa fa-github"></i></a>
+					
+					
+					<a href="https://zhihu.com/people/feng-qi-ru-meng" target="_blank" title="zhihu"><i class="fa fa-paw"></i></a>
+					
+					
+					<a href="https://zhihu.com/people/feng-qi-ru-meng" target="_blank" title="wechat"><i class="fa fa-weixin"></i></a>
+						
+				</div>
+			</div>
+			
+			<nav id="nav-bar">
 				<ul>
 					
-						<li><a href="">Home</a></li>
+						<li><a data-pjax href="/">Home</a></li>
 					
-						<li><a href="">HTML</a></li>
+						<li><a data-pjax href="/categories/javascript/">JavaScript</a></li>
 					
-						<li><a href="">CSS</a></li>
+						<li><a data-pjax href="/categories/css/">CSS</a></li>
 					
-						<li><a href="">JavaScript</a></li>
+						<li><a data-pjax href="/categories/library/">Library</a></li>
 					
-						<li><a href="">jQuery</a></li>
-					
-						<li><a href="">Photos</a></li>
-					
-						<li><a href="">Music</a></li>
+						<li><a data-pjax href="/categories/music/">Music</a></li>
 					
 				</ul>
 			</nav>			
@@ -62,69 +75,37 @@
     </header>
     <div id="container">
       <div id="main" class="post" itemscope itemprop="blogPost">
-	<article itemprop="articleBody"> 
+	<article class="library" itemprop="articleBody"> 
 		<header class="article-info clearfix">
   <h1 itemprop="name">
-    
-      <a href="/2015/06/12/示例文章3/" title="示例文章3" itemprop="url">示例文章3</a>
+    jQuery中attr和prop方法的区别
   </h1>
-  <p class="article-author">By
-    
-      <a href="http://yoursite.com" title="Yang Shaoyue">Yang Shaoyue</a>
-    </p>
   <p class="article-time">
-    <time datetime="2015-06-12T01:40:07.000Z" itemprop="datePublished">2015-06-12</time>
-    更新日期:<time datetime="2015-06-12T09:11:12.283Z" itemprop="dateModified">2015-06-12</time>
-    
+    <i class="fa fa-clock-o"></i>
+    <time datetime="2015-06-20T11:17:49.000Z" itemprop="datePublished">Jun 20 2015</time>
   </p>
 </header>
 	<div class="article-content">
 		
 		
-		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目錄</strong>
-		
-		</div>
-		
-		<p>Je suis passionné par la photo depuis l’âge de trois ans, âge auquel je mangeai les trois-quart du Minolta de mon paternel avant que ma mère ne dusse appeler le SAMU, le développement de la pellicule s’avérant un trop laborieux effort pour le jeune photographe en herbe que j’étais.<br>Depuis, je cherche à digérer le monde au travers de l’objectif.</p>
-<p>I am fascinated by the photo from the age of three years, at which I ate three-quarters of my paternal Minolta before my mother had to call EMS, the development of the film proving too laborious effort to the young budding photographer I was.<br>Since I try to digest the world through the lens.</p>
+		<p>大家都知道有的浏览器只要写disabled，checked就可以了，而有的要写成disabled = “disabled”，checked=”checked”，比如用attr(“checked”)获取checkbox的checked属性时选中的时候可以取到值,值为”checked”但没选中获取值就是undefined。<br>jq提供新的方法“prop”来获取这些属性，就是来解决这个问题的，以前我们使用attr获取checked属性时返回”checked”和””,现在使用prop方法获取属性则统一返回true和false。<br><a id="more"></a><br>那么，什么时候使用attr()，什么时候使用prop()？<br>1.添加属性名称该属性就会生效应该使用prop();<br>2.是有true,false两个属性使用prop();<br>3.其他则使用attr();</p>
   
 	</div>
-		<footer class="article-footer clearfix">
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/essay/">essay</a>
-  </div>
-
-
-
-
-<div class="article-share" id="share">
-
-  <div data-url="http://yoursite.com/2015/06/12/示例文章3/" data-title="示例文章3 | Yang Shaoyue" data-tsina="undefined" class="share clearfix">
-  </div>
-
-</div>
-</footer>   	       
+			       
 	</article>
 	
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2015/06/12/示例文章2/" title="示例文章2">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  示例文章2</span>
+ <a data-pjax href="/2015/06/20/before和-after伪元素/" title=":before和:after伪元素">
+  <i class="fa fa-angle-left fa-9x"></i>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2015/06/11/hello-world/"  title="Hello World">
- <strong>NEXT:</strong><br/> 
- <span>Hello World
-</span>
+<a data-pjax href="/2015/06/20/JavaScript高级程序设计读书笔记/"  title="JavaScript高级程序设计读书笔记">
+ <i class="fa fa-angle-right fa-9x"></i>
 </a>
 </div>
 
@@ -132,37 +113,17 @@
 
 	
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
-
-  <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目錄</strong>
-  
-  </div>
-
-</div>
     </div>
     <footer><div id="footer" >
+	<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">Hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
 	
-	<div class="social-font clearfix">
-		
-		<a href="https://github.com/YangShaoyue" target="_blank" title="github"><i class="fa fa-github"></i></a>
-		
-		
-		<a href="https://github.com/YangShaoyue" target="_blank" title="google"><i class="fa fa-google"></i></a>
-		
-		
-		<a href="https://zhihu.com/people/feng-qi-ru-meng" target="_blank" title="wechat"><i class="fa fa-weixin"></i></a>
-			
-	</div>
+	<a href="http://yoursite.com" target="_blank" title="Yang Shaoyue">Yang Shaoyue</a>
 	
-		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">Hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
-		
-		<a href="http://yoursite.com" target="_blank" title="Yang Shaoyue">Yang Shaoyue</a>
-		
-		</p>
-</div>
-</footer>
+	</p>
+</div></footer>
     <script src="/js/jquery-2.1.0.min.js"></script>
+<script src="/js/jquery.pjax.js"></script>
+<script src="/js/main.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){ 
   $('.navbar').click(function(){

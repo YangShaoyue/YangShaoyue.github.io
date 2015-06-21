@@ -4,14 +4,20 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>CSS属性 | Yang Shaoyue</title>
+    <title>:before和:after伪元素 | Yang Shaoyue</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="Yang Shaoyue">
     
-    <meta name="description" content="margin: 10px 5px 15px; 表示：上外边距：10px，左右外边距：5px，下外边距：15px
-margin: 10px 5px; 表示：上 下外边距：10px，左右外边距：5px
-clear: none; 默认值，允许两边都可以有浮动对象left; 不允许左边有浮动对象right; 不允许右边有浮动对象both; 两测不允许有浮动对象">
+    <meta name="description" content=":before :after作用：It creates a  phoney element and inserts it before or after the content of the element that you’ve targeted.
+ 1 #example:before { 2     content: “#”; 3 } 4 5 #example:after { 6     content: “.”; 7 } 
+
+we’re targeting the same element using #example:before and #example:after. Strictly speaking, they’re the pseudo-elements in the code.
+
+Without the content property, pseudo-elements are useless. So while the pseudo-element selector itself is needed to target the element, you won’t be able to insert anything without adding the content property.
+
+
+You could leave the content property empty and just treat the pseudo-element like a content-less box, like this:">
     
     <meta name="keywords" content="css">
     
@@ -80,20 +86,34 @@ clear: none; 默认值，允许两边都可以有浮动对象left; 不允许左�
 	<article class="css" itemprop="articleBody"> 
 		<header class="article-info clearfix">
   <h1 itemprop="name">
-    CSS属性
+    :before和:after伪元素
   </h1>
   <p class="article-time">
     <i class="fa fa-clock-o"></i>
-    <time datetime="2015-06-12T01:45:19.000Z" itemprop="datePublished">Jun 12 2015</time>
+    <time datetime="2015-06-20T11:28:35.000Z" itemprop="datePublished">Jun 20 2015</time>
   </p>
 </header>
 	<div class="article-content">
 		
 		
-		<p>margin: 10px 5px 15px; 表示：上外边距：10px，左右外边距：5px，下外边距：15px</p>
-<p>margin: 10px 5px; 表示：上 下外边距：10px，左右外边距：5px</p>
-<p>clear: none; 默认值，允许两边都可以有浮动对象<br>left; 不允许左边有浮动对象<br>right; 不允许右边有浮动对象<br>both; 两测不允许有浮动对象<br><a id="more"></a><br>overflow: hidden 和 clear: both 区别？</p>
-<p>float和position: absolute<br>float会导致元素脱离文档流，但还在文档或容器中占据位置，把文档流或其它float元素向左或向右挤，并可能导致换行。图片的文 字环绕布局效果就是float。<br>position: absolute也会导致元素脱离文档流，而且被定位的元素在文档中不占据任何位置，在另一层呈现，可以设置z-index。类似于PS的图层效果。</p>
+		<p>:before :after作用：It creates a  phoney element and inserts it before or after the content of the element that you’ve targeted.</p>
+<p> 1 #example:before {<br> 2     content: “#”;<br> 3 }<br> 4<br> 5 #example:after {<br> 6     content: “.”;<br> 7 } </p>
+<ol>
+<li><p>we’re targeting the same element using #example:before and #example:after. Strictly speaking, they’re the pseudo-elements in the code.</p>
+</li>
+<li><p>Without the content property, pseudo-elements are useless. So while the pseudo-element selector itself is needed to target the element, you won’t be able to insert anything without adding the content property.</p>
+</li>
+</ol>
+<p>You could leave the content property empty and just treat the pseudo-element like a content-less box, like this:<br><a id="more"></a><br> 1 #example:before {<br> 2     content: “”;<br> 3     display:block;<br> 4     width: 100px;<br> 5     height: 100px;<br> 6 } </p>
+<p>However, you can’t remove the content property altogether. If you did, the pseudo-element wouldn’t work.</p>
+<p> 1 :before {<br> 2     content: “#”;<br> 3 } </p>
+<p>While the above is valid, it’s pretty useless. The code will insert a hash symbol before the content in each element in the DOM. Even if you removed the <body> tag and all of its content, you’d still see two hash symbols on the page: one in the <html> element, and one in the <body> tag, which the browser automatically constructs.</body></html></body></p>
+<p>the content that is inserted is not visible in the page’s source. It’s visible only in the CSS.</p>
+<p>the inserted element is by default an inline element (or, in HTML5 terms, in the category of text-level semantics). So, to give the inserted element a height, padding, margins and so forth, you’ll usually have to define it explicitly as a block-level element.</p>
+<p>typical CSS inheritance rules apply to the inserted elements. If you had, for example, a font stack of Helvetica, Arial, sans-serif applied to the <body> element of the document, then the pseudo-element would inherit that font stack the same as any other element would.</body></p>
+<p>The content that’s injected will be child content in relation to the targeted element, but it will be placed “before” or “after” any other content in that element.</p>
+<pre><code>&lt;<span class="tag">p</span> class=<span class="string">"box"</span>&gt;Other <span class="attribute">content</span>&lt;/p&gt;
+</code></pre><p> 1 p.box {<br> 2     width:300px;<br> 3     border: solid 1px white;<br> 4     padding: 20px;<br> 5 }<br> 6<br> 7 p.box:before {<br> 8     content: “#”;<br> 9     border: 1px solid white;<br>10     padding: 2px;<br>11     margin: 0 10px 0 0;<br>12 } </p>
   
 	</div>
 			       
@@ -101,12 +121,12 @@ clear: none; 默认值，允许两边都可以有浮动对象left; 不允许左�
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a data-pjax href="/2015/06/13/眉间雪/" title="眉间雪">
-  <i class="fa fa-angle-left fa-9x"></i>
+
+<div class="next">
+<a data-pjax href="/2015/06/20/jQuery中attr和prop方法的区别/"  title="jQuery中attr和prop方法的区别">
+ <i class="fa fa-angle-right fa-9x"></i>
 </a>
 </div>
-
 
 </nav>
 

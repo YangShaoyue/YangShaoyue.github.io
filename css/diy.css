@@ -12,24 +12,30 @@ body {
 	margin: 0;
 	padding: 0;
 	font-size: 62.5%;
+	overflow-x: hidden;
+	background: url(../img/ticks.png) repeat;
 }
 
+/* avatar */
 header #avatar {
-	position: absolute;
+	position: relative;
 	width: 15rem;
 	height: 15rem;
+	border-radius: 7.5rem;
 	left: 50%;
-	top: 35%;
+	top: 14rem;
 	margin-left: -7.5rem;
 }
 
 header #avatar a img {
+	position: absolute;
 	display: inline-block;
 	width: 15rem;
 	height: 15rem;
 	border-radius: 7.5rem;
 }
 
+/* title subtitle */
 #author {
 	position: absolute;
 	top: 5rem;
@@ -49,70 +55,386 @@ header #avatar a img {
 
 
 #author h2 {
+	font-family: "Ubuntu Regular";
 	text-align: center;
 	color: #979DA6;
 }
 
-header nav.animated {
+header nav#nav-bar {
 	position: fixed;
-	top: 1rem;
+	top: 0;
 	width: 100%;
+	height: 3.6rem;
+	font-family: "Ubuntu Regular";
+	font-size: 0.9rem;
+	font-weight: 600;
+	background: #DBDBDB; /* #DBDBDB */
 	text-align: center;
-	
+	z-index: 9;
 }
 
-header nav.animated ul {
+header nav#nav-bar:before { /* 居中ul */
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+header nav#nav-bar ul {
+	display: inline-block;
+	vertical-align: middle;
 	text-decoration: none;
 }
 
-header nav.animated ul li {
+header nav#nav-bar ul li {
 	display: inline-block;
+	position: relative;
 	margin-left: 4rem;
 }
 
-header nav.animated ul li:nth-child(1) {
+header nav#nav-bar ul li:nth-child(1) {
 	margin-left: 0;
 }
 
-header nav.animated ul li a {
+header nav#nav-bar ul li a {
+	text-decoration: none;
+	color: #6D727A;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+header nav#nav-bar ul li a:hover {
+	color: rgba(247, 126, 117, 0.9);
+}
+
+header .social-wrapper {
+	position: absolute;
+	top: 31rem;
+	width: 100%;
+	height: 2.5rem;
+	text-align: center;
+}
+
+header .social-font {
+	display: inline-block; /* 让父元素的text-align:center生效 */
+	width: 10rem;
+	height: 2rem;
+}
+
+header .social-font a[title="zhihu"] {
+	margin-left: 2rem;
+}
+
+header .social-font a[title="wechat"] {
+	margin-left: 2rem;
+}
+
+header .social-font a {
+	font-size: 1.6rem;
+	color: #4F5359;
+} 
+
+/* Article */
+#container {
+	display: none;
+	width: 100%;
+	/*position: relative;
+	top: 10rem;
+	left: 20%;*/
+	text-align: center;
+}
+
+#container .archive-title {
+	position: absolute;
+	left: 10rem;
+	top: 20rem;
+}
+
+#container #main {
+	display: inline-block;
+	width: 50%;
+	text-align: left;
+	margin-top: 10rem;
+}
+
+#container #main section {
+	position: relative;
+	font-family: "Ubuntu Regular", '微软雅黑';
+	margin-bottom: 4rem;
+}
+
+#container #main section a {
 	text-decoration: none;
 }
 
-#container {
+#container #main section a h1 {
+	font-size: 1.3rem;
+	font-weight: normal;
+	color: #4D5157;
+}
+
+#container #main section a h1:hover {
+	color: #f77e75;
+}
+
+#container #main section div.excerpt {
+	font-family: '微软雅黑';
+	font-size: 0.9rem;
+	color: #646A70;
+	line-height: 22px;
+	border-bottom: 1px solid #BEC6D1;
+}
+
+	/* more link */
+#container #main section a.article-more-link {
+	position: absolute;
+	right: -6rem;
+	bottom: 0;
+	display: inline-block;
+	font-size: 0.7rem;
+	width: 5rem;
+	height: 2rem;
+	border: 1px solid #f77e75; /* #A2A9B2 */
+	border-radius: 1rem;
+	color: #f77e75; /* #A2A9B2 */
+	text-align: center;
+}
+
+#container #main section a.article-more-link:before { /* 居中span */
+	content: "";
+	height: 100%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#container #main section a.article-more-link span {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#container #main section a.article-more-link i {
+	display: inline-block;
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	margin: auto;
+	left: 0;
+	right: 6rem;
+	top: 0;
+	bottom: 0;
+	opacity: 0;
+}
+
+#container #main section a.article-more-link:hover i {
+	right: 0;
+	opacity: 1;
+	-webkit-transition: all 1s;
+	transition: all 1s;
+}
+
+#container #main section a.article-more-link:hover span {
 	display: none;
 }
 
-footer #footer .social-font {
-	position: relative;
-	width: 15rem;
-	height: 2.5rem;
-	top: 31rem;
-	left: 35rem;
-}
-
-footer #footer .social-font a {
+#container #main section time {
 	position: absolute;
+	right: 0;
+	top: 1rem;
+	color: #A2A9B2;
+	font-size: 0.7rem;
 }
 
-footer #footer .social-font a[title="github"] {
-	left: 1rem;
-}
-
-footer #footer .social-font a[title="google"] {
-	left: 6.5rem;
-}
-
-footer #footer .social-font a[title="wechat"] {
-	right: 1rem;
-}
-
-footer #footer .social-font a {
-	font-size: 2rem;
+	/* single article */
+#container #main article header h1 {
+	font-family: "Ubuntu Regular", '微软雅黑';
+	font-size: 1.7rem;
+	font-weight: normal;
 	color: #4F5359;
 }
 
-footer #footer p.copyright {
-	position: absolute;
-	left: 30rem;
-	bottom: 2rem;
+#container #main article header p {
+	font-family: "Ubuntu Regular", '微软雅黑';
+	color: #A2A9B2;
+	font-size: 0.7rem;
 }
+
+#container #main article .article-content p {
+	font-family: '微软雅黑';
+	font-size: 1rem;
+	color: #646A70;
+	line-height: 26px;
+}
+
+#container #main nav.article-nav .prev {
+	position: fixed;
+	width: 20%;
+	height: 70%;
+	top: 20%;
+	left: 0;
+
+}
+
+#container #main nav.article-nav .next {
+	position: fixed;
+	width: 20%;
+	height: 70%;
+	top: 20%;
+	right: 0;
+}
+
+#container #main nav.article-nav .prev a {
+	position: relative;
+	top: 34%;
+	left: 40%;
+	font-size: 5rem;
+	color: #979DA6;
+	opacity: 0.2;
+}
+
+#container #main nav.article-nav .prev:hover a {
+	opacity: 0.8;
+}
+
+#container #main nav.article-nav .next a {
+	position: relative;
+	top: 34%;
+	left: 45%;
+	font-size: 5rem;
+	color: #979DA6;
+	opacity: 0.2;
+}
+
+#container #main nav.article-nav .next:hover a {
+	opacity: 0.8;
+}
+
+/* Footer */
+footer {
+	position: absolute;
+	bottom: 3%;
+	width: 100%;
+	text-align: center;
+}
+
+footer #footer p.copyright {
+	display: inline-block;
+	font-family: "Ubuntu Regular";
+	font-size: 0.7rem;
+	color: #898E96;
+}
+
+footer #footer p.copyright a {
+	text-decoration: none;
+	color: #DE9DD6;
+}
+
+footer #footer span {
+	position: fixed;
+	right: 1rem;
+	bottom: 0.5rem;
+	font-size: 1rem;
+	color: #BB8CC2;
+	cursor: pointer;
+}
+
+/*
+ * Animation
+ * show all articles
+ */
+#all-articles {
+	position: absolute;
+	left: 1rem;
+	bottom: 0.5rem;
+}
+
+	/* avatar animation */
+header #avatar.avatar-animation {
+	position: fixed;
+	left: 4rem;
+	top: -4rem;
+	transform: scale(0.3);
+	z-index: 10;
+	-webkit-animation: avatar_animation 1s forwards;
+	animation: avatar_animation 1s forwards;
+}
+
+@-webkit-keyframes avatar_animation {
+	0% {
+		left: 50%;
+		top: 14rem;
+	}
+
+	100% {
+		left: 4rem;
+		top: -4rem;
+		transform: scale(0.3);
+		z-index: 10;	
+	}
+}
+
+@keyframes avatar_animation {
+	0% {
+		left: 50%;
+		top: 14rem;
+	}
+
+	100% {
+		left: 4rem;
+		top: -4rem;
+		transform: scale(0.3);
+		z-index: 10;	
+	}
+}
+
+#author h2.subtitle-animation {
+	position: fixed;
+	left: 7rem;
+	top: 3.7rem; 
+}
+
+header .social-animation {
+	position: fixed;
+	width: 6rem;
+	height: 1.3rem;
+	right: 1rem;
+	top: 1.3rem;
+	z-index: 10;
+}
+
+header .social-animation .social-font {
+	width: 6rem;
+	height: 1.3rem;
+}
+
+header .social-animation .social-font a {
+	font-size: 1rem;
+	color: #7D848C;
+} 
+
+header .social-animation .social-font a:hover {
+	color: #4F5359;
+}
+
+header .social-font a[title="zhihu"] {
+	margin-left: 1rem;
+}
+
+header .social-font a[title="wechat"] {
+	margin-left: 1rem;
+}
+
+	/* footer animation */
+footer.footer-animation1 {
+	position: fixed;
+	right: -22rem;
+	bottom: 0;
+	width: auto;
+	-webkit-transition: right 1s;
+	transition: right 1s;
+}
+
+footer.footer-animation2 {
+	right: 2.5rem;
+}
+
+/* pjax fadeIn fadeOut */

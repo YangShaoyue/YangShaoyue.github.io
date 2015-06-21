@@ -4,18 +4,18 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>HTML标签 | Yang Shaoyue</title>
+    <title>Flex布局 | Yang Shaoyue</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="Yang Shaoyue">
     
-    <meta name="description" content="action属性：规定当提交表单时，向何处发送表单数据
-type=”radio”定义单选按钮
-for属性：规定label与哪个表单元素绑定
-name属性：规定input元素的名称
-name属性用于对提交服务器后的表单数据进行标识，或者在客户端通过JavaScript引用表单数据只有设置了name属性">
+    <meta name="description" content="应用在容器元素上：
+display: display: flex; / inline-flex /;
+CSS的columns属性在容器上无效
+flex-direction: row | row-reverse | column | column-reverse;
+用来创建主轴，从而定义了伸缩项目放置在容器中的方向">
     
-    
+    <meta name="keywords" content="css">
     
     
     
@@ -31,33 +31,46 @@ name属性用于对提交服务器后的表单数据进行标识，或者在客�
 
   <body>
     <header>
-      <div>
+      <div id="all-articles">
+	<i class="fa fa-bell-o"></i>	
+</div>
+<div>
 		
 			<div id="avatar">
 				<a href="/"><img src="/img/me.jpg" alt="Yang Shaoyue" title="Yang Shaoyue"/></a>
+				<a href="/"><img src="/img/avatar.jpg" alt="Yang Shaoyue" title="Yang Shaoyue"/></a>
 			</div>
 			
 			<div id="author">
 				<h1 class="site-name"><a href="/" title="Yang Shaoyue">Yang Shaoyue</a></h1>
 				<h2 class="blog-motto">no path but through</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單"></a></div>
-			<nav class="animated">
+			<div class="social-wrapper">
+				<div class="social-font clearfix">
+					
+					<a href="https://github.com/YangShaoyue" target="_blank" title="github"><i class="fa fa-github"></i></a>
+					
+					
+					<a href="https://zhihu.com/people/feng-qi-ru-meng" target="_blank" title="zhihu"><i class="fa fa-paw"></i></a>
+					
+					
+					<a href="https://zhihu.com/people/feng-qi-ru-meng" target="_blank" title="wechat"><i class="fa fa-weixin"></i></a>
+						
+				</div>
+			</div>
+			
+			<nav id="nav-bar">
 				<ul>
 					
-						<li><a href="">Home</a></li>
+						<li><a data-pjax href="/">Home</a></li>
 					
-						<li><a href="">HTML</a></li>
+						<li><a data-pjax href="/categories/javascript/">JavaScript</a></li>
 					
-						<li><a href="">CSS</a></li>
+						<li><a data-pjax href="/categories/css/">CSS</a></li>
 					
-						<li><a href="">JavaScript</a></li>
+						<li><a data-pjax href="/categories/library/">Library</a></li>
 					
-						<li><a href="">jQuery</a></li>
-					
-						<li><a href="">Photos</a></li>
-					
-						<li><a href="">Music</a></li>
+						<li><a data-pjax href="/categories/music/">Music</a></li>
 					
 				</ul>
 			</nav>			
@@ -66,74 +79,41 @@ name属性用于对提交服务器后的表单数据进行标识，或者在客�
     </header>
     <div id="container">
       <div id="main" class="post" itemscope itemprop="blogPost">
-	<article itemprop="articleBody"> 
+	<article class="css" itemprop="articleBody"> 
 		<header class="article-info clearfix">
   <h1 itemprop="name">
-    
-      <a href="/2015/06/12/HTML标签/" title="HTML标签" itemprop="url">HTML标签</a>
+    Flex布局
   </h1>
-  <p class="article-author">By
-    
-      <a href="http://yoursite.com" title="Yang Shaoyue">Yang Shaoyue</a>
-    </p>
   <p class="article-time">
-    <time datetime="2015-06-12T01:44:47.000Z" itemprop="datePublished">2015-06-12</time>
-    更新日期:<time datetime="2015-06-12T09:10:18.153Z" itemprop="dateModified">2015-06-12</time>
-    
+    <i class="fa fa-clock-o"></i>
+    <time datetime="2015-06-20T11:08:32.000Z" itemprop="datePublished">Jun 20 2015</time>
   </p>
 </header>
 	<div class="article-content">
 		
 		
-		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目錄</strong>
-		
-		</div>
-		
-		<p>action属性：规定当提交表单时，向何处发送表单数据</p>
-<p>type=”radio”定义单选按钮</p>
-<p>for属性：规定label与哪个表单元素绑定</p>
-<p>name属性：规定input元素的名称</p>
-<p>name属性用于对提交服务器后的表单数据进行标识，或者在客户端通过JavaScript引用表单数据<br>只有设置了name属性的表单元素才能在提交表单时传递他们的值</p>
-<p>标签无法被点击的情况：（href属性存在）</p>
-<p>因为标签被覆盖，标签下方有通过position:absolute进行绝对定位的元素，父元素（position: relative）包括此标签，并且进行绝对定位时使用的是padding-left、padding-top…应用left，top调整位置。</p>
+		<p>应用在容器元素上：</p>
+<p>display: display: flex; /<em> inline-flex </em>/;</p>
+<p>CSS的columns属性在容器上无效</p>
+<p>flex-direction: row | row-reverse | column | column-reverse;</p>
+<p>用来创建主轴，从而定义了伸缩项目放置在容器中的方向<br><a id="more"></a><br>row(默认)：在“ltr”排版方式下从左向右排列；在“rtl”排版方式下从右向左排列<br>row-reverse：与row排列方向相反<br>column：类似于row，不过是从上到下排列<br>column-reverse：与column排列方向相反</p>
   
 	</div>
-		<footer class="article-footer clearfix">
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/html/">html</a>
-  </div>
-
-
-
-
-<div class="article-share" id="share">
-
-  <div data-url="http://yoursite.com/2015/06/12/HTML标签/" data-title="HTML标签 | Yang Shaoyue" data-tsina="undefined" class="share clearfix">
-  </div>
-
-</div>
-</footer>   	       
+			       
 	</article>
 	
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2015/06/12/CSS属性/" title="CSS属性">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  CSS属性</span>
+ <a data-pjax href="/2015/06/20/JavaScript高级程序设计读书笔记/" title="JavaScript高级程序设计读书笔记">
+  <i class="fa fa-angle-left fa-9x"></i>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2015/06/12/Hello-World-0/"  title="Hello World">
- <strong>NEXT:</strong><br/> 
- <span>Hello World
-</span>
+<a data-pjax href="/2015/06/13/眉间雪/"  title="眉间雪">
+ <i class="fa fa-angle-right fa-9x"></i>
 </a>
 </div>
 
@@ -141,37 +121,17 @@ name属性用于对提交服务器后的表单数据进行标识，或者在客�
 
 	
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
-
-  <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目錄</strong>
-  
-  </div>
-
-</div>
     </div>
     <footer><div id="footer" >
+	<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">Hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
 	
-	<div class="social-font clearfix">
-		
-		<a href="https://github.com/YangShaoyue" target="_blank" title="github"><i class="fa fa-github"></i></a>
-		
-		
-		<a href="https://github.com/YangShaoyue" target="_blank" title="google"><i class="fa fa-google"></i></a>
-		
-		
-		<a href="https://zhihu.com/people/feng-qi-ru-meng" target="_blank" title="wechat"><i class="fa fa-weixin"></i></a>
-			
-	</div>
+	<a href="http://yoursite.com" target="_blank" title="Yang Shaoyue">Yang Shaoyue</a>
 	
-		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">Hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
-		
-		<a href="http://yoursite.com" target="_blank" title="Yang Shaoyue">Yang Shaoyue</a>
-		
-		</p>
-</div>
-</footer>
+	</p>
+</div></footer>
     <script src="/js/jquery-2.1.0.min.js"></script>
+<script src="/js/jquery.pjax.js"></script>
+<script src="/js/main.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){ 
   $('.navbar').click(function(){

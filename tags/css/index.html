@@ -27,33 +27,46 @@
 
     <body>
       <header>
-        <div>
+        <div id="all-articles">
+	<i class="fa fa-bell-o"></i>	
+</div>
+<div>
 		
 			<div id="avatar">
 				<a href="/"><img src="/img/me.jpg" alt="Yang Shaoyue" title="Yang Shaoyue"/></a>
+				<a href="/"><img src="/img/avatar.jpg" alt="Yang Shaoyue" title="Yang Shaoyue"/></a>
 			</div>
 			
 			<div id="author">
 				<h1 class="site-name"><a href="/" title="Yang Shaoyue">Yang Shaoyue</a></h1>
 				<h2 class="blog-motto">no path but through</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單"></a></div>
-			<nav class="animated">
+			<div class="social-wrapper">
+				<div class="social-font clearfix">
+					
+					<a href="https://github.com/YangShaoyue" target="_blank" title="github"><i class="fa fa-github"></i></a>
+					
+					
+					<a href="https://zhihu.com/people/feng-qi-ru-meng" target="_blank" title="zhihu"><i class="fa fa-paw"></i></a>
+					
+					
+					<a href="https://zhihu.com/people/feng-qi-ru-meng" target="_blank" title="wechat"><i class="fa fa-weixin"></i></a>
+						
+				</div>
+			</div>
+			
+			<nav id="nav-bar">
 				<ul>
 					
-						<li><a href="">Home</a></li>
+						<li><a data-pjax href="/">Home</a></li>
 					
-						<li><a href="">HTML</a></li>
+						<li><a data-pjax href="/categories/javascript/">JavaScript</a></li>
 					
-						<li><a href="">CSS</a></li>
+						<li><a data-pjax href="/categories/css/">CSS</a></li>
 					
-						<li><a href="">JavaScript</a></li>
+						<li><a data-pjax href="/categories/library/">Library</a></li>
 					
-						<li><a href="">jQuery</a></li>
-					
-						<li><a href="">Photos</a></li>
-					
-						<li><a href="">Music</a></li>
+						<li><a data-pjax href="/categories/music/">Music</a></li>
 					
 				</ul>
 			</nav>			
@@ -63,21 +76,87 @@
       <div id="container">
         
 
-<div class="archive-title" >
-  <h2 class="tag-icon">css</h2>
-  
-</div>
 <div id="main" class="archive-part clearfix">
   <div id="archive-page">
-
-  <section class="post" itemscope itemprop="blogPost">
   
-    <a href="/2015/06/12/CSS属性/" title="CSS属性" itemprop="url">
+  <section class="post css" itemscope itemprop="blogPost">
   
-    <h1 itemprop="name">CSS属性</h1>
+    <a data-pjax href="/2015/06/20/before和-after伪元素/" title=":before和:after伪元素" itemprop="url">
+  
+      <h1 class="article-title" itemprop="name">:before和:after伪元素</h1>
+    </a>
     
-    <time datetime="2015-06-12T01:45:19.000Z" itemprop="datePublished">2015-06-12</time>
-  </a>
+      
+        <div class="excerpt" itemprop="description2" ><p>:before :after作用：It creates a  phoney element and inserts it before or after the content of the element that you’ve targeted.</p>
+<p> 1 #example:before {<br> 2     content: “#”;<br> 3 }<br> 4<br> 5 #example:after {<br> 6     content: “.”;<br> 7 } </p>
+<ol>
+<li><p>we’re targeting the same element using #example:before and #example:after. Strictly speaking, they’re the pseudo-elements in the code.</p>
+</li>
+<li><p>Without the content property, pseudo-elements are useless. So while the pseudo-element selector itself is needed to target the element, you won’t be able to insert anything without adding the content property.</p>
+</li>
+</ol>
+<p>You could leave the content property empty and just treat the pseudo-element like a content-less box, like this:<br></div>
+        
+          <a class="article-more-link" data-pjax href="/2015/06/20/before和-after伪元素/#more">
+            <i class="fa fa-arrow-right"></i>
+            <span>Read More</span>
+          </a>
+        
+      
+   
+    
+    <time datetime="2015-06-20T11:28:35.000Z" itemprop="datePublished">Jun 20 2015</time>
+
+</section>
+
+  <section class="post css" itemscope itemprop="blogPost">
+  
+    <a data-pjax href="/2015/06/20/Flex布局/" title="Flex布局" itemprop="url">
+  
+      <h1 class="article-title" itemprop="name">Flex布局</h1>
+    </a>
+    
+      
+        <div class="excerpt" itemprop="description2" ><p>应用在容器元素上：</p>
+<p>display: display: flex; /<em> inline-flex </em>/;</p>
+<p>CSS的columns属性在容器上无效</p>
+<p>flex-direction: row | row-reverse | column | column-reverse;</p>
+<p>用来创建主轴，从而定义了伸缩项目放置在容器中的方向<br></div>
+        
+          <a class="article-more-link" data-pjax href="/2015/06/20/Flex布局/#more">
+            <i class="fa fa-arrow-right"></i>
+            <span>Read More</span>
+          </a>
+        
+      
+   
+    
+    <time datetime="2015-06-20T11:08:32.000Z" itemprop="datePublished">Jun 20 2015</time>
+
+</section>
+
+  <section class="post css" itemscope itemprop="blogPost">
+  
+    <a data-pjax href="/2015/06/12/CSS属性/" title="CSS属性" itemprop="url">
+  
+      <h1 class="article-title" itemprop="name">CSS属性</h1>
+    </a>
+    
+      
+        <div class="excerpt" itemprop="description2" ><p>margin: 10px 5px 15px; 表示：上外边距：10px，左右外边距：5px，下外边距：15px</p>
+<p>margin: 10px 5px; 表示：上 下外边距：10px，左右外边距：5px</p>
+<p>clear: none; 默认值，允许两边都可以有浮动对象<br>left; 不允许左边有浮动对象<br>right; 不允许右边有浮动对象<br>both; 两测不允许有浮动对象<br></div>
+        
+          <a class="article-more-link" data-pjax href="/2015/06/12/CSS属性/#more">
+            <i class="fa fa-arrow-right"></i>
+            <span>Read More</span>
+          </a>
+        
+      
+   
+    
+    <time datetime="2015-06-12T01:45:19.000Z" itemprop="datePublished">Jun 12 2015</time>
+
 </section>
 
 
@@ -86,27 +165,15 @@
 
       </div>
       <footer><div id="footer" >
+	<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">Hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
 	
-	<div class="social-font clearfix">
-		
-		<a href="https://github.com/YangShaoyue" target="_blank" title="github"><i class="fa fa-github"></i></a>
-		
-		
-		<a href="https://github.com/YangShaoyue" target="_blank" title="google"><i class="fa fa-google"></i></a>
-		
-		
-		<a href="https://zhihu.com/people/feng-qi-ru-meng" target="_blank" title="wechat"><i class="fa fa-weixin"></i></a>
-			
-	</div>
+	<a href="http://yoursite.com" target="_blank" title="Yang Shaoyue">Yang Shaoyue</a>
 	
-		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">Hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
-		
-		<a href="http://yoursite.com" target="_blank" title="Yang Shaoyue">Yang Shaoyue</a>
-		
-		</p>
-</div>
-</footer>
+	</p>
+</div></footer>
       <script src="/js/jquery-2.1.0.min.js"></script>
+<script src="/js/jquery.pjax.js"></script>
+<script src="/js/main.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){ 
   $('.navbar').click(function(){
