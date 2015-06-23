@@ -47,32 +47,15 @@ $(document).ready(function() {
 	});
 
 	//  滑动触发动画
-	$("#all-articles i").mouseenter(function() {
-		animationTrigger();
-	});
+	// $("#all-articles i").mouseenter(function() {
+	// 	animationTrigger();
+	// });
 
 	// 导航栏被点击时，改变导航栏颜色
-	// $("nav#nav-bar ul li a").click(function() {
-	// 	$(this).css("color", "#f77e75");
-
-	// 	// 判断被点击元素的兄弟元素是否被点击过（即颜色是否改变）
-	// 	var prev = $(this).parent().prev();
-	// 	var next = $(this).parent().next();
-	// 	for (var i=0, len=$("ul li a").length - 1; i < len; i++) {
-	// 		// jquery css()方法获取的是rgb格式的颜色
-	// 		if (prev.children("a").css("color") == "rgb(247, 126, 117)") {
-	// 			prev.children("a").css("color", "#6D727A");
-	// 		} else {
-	// 			prev = prev.prev();
-	// 		}
-			
-	// 		if (next.children("a").css("color") == "rgb(247, 126, 117)") {
-	// 			next.children("a").css("color", "#6D727A");
-	// 		} else {
-	// 			next = next.next();
-	// 		}
-	// 	}
-	// });
+	$("nav#nav-bar ul li").click(function() {
+		$(this).siblings('.active').removeClass('active');
+		$(this).addClass('active');
+	});
 });
 
 /*
@@ -95,14 +78,56 @@ function wasTriggered() {
 }
 wasTriggered();
 
-// function antiHighlight() {
-// 	$("#nav-bar").find('a').each(function() {
-// 		$(this).css("color", "#6D727A");
-// 	});
-// }
+function paginatorModify() {
+	// 首页/分类页的分页按钮添加pjax功能
+	$("nav#page-nav a").attr("data-pjax", "");
 
-// $("#main section a h1").click(function() {
-// 	antiHighlight();
-// });
+	// 插入含有当前文章页面总数的span节点
+	var pageNumber = document.getElementsByClassName('page-number').length;
+	var separator = "/";
+	$("nav#page-nav span.page-number").after("<span class='total'></span>");
+	$("nav#page-nav span.page-number").after("<span class='separator'></span>");
+	$("nav#page-nav span.separator").text(separator);
+	$("nav#page-nav span.total").text(pageNumber);
+
+	var $prev = "<a class='extend prev disabled' rel='prev'></a>";
+	var $next = "<a class='extend next disabled' rel='next'></a>";
+	if ( $("nav#page-nav a:first-child").attr("rel") !== "prev" ) {
+		$("nav#page-nav").prepend($prev);
+	}
+
+	if ( $("nav#page-nav a:last-child").attr("rel") !== "next" ) {
+		$("nav#page-nav").append($next);
+	}
+
+	// 将向前向后按钮文本设置为空 
+	$("nav#page-nav .extend").text("");
+
+
+	$("nav#page-nav .extend").append("<i></i>");
+	$("nav#page-nav .extend").append("<i></i>");
+}
+
+function afterPjax() {
+	// 点击 文章标题 或者 Read More按钮 去掉导航栏高亮
+	$("#main section h1 a").click(function() {
+		$("#nav-bar").find("li").each(function() {
+			$(this).removeClass("active");
+		});
+	});
+
+	$("#main section a.article-more-link").click(function() {
+		$("#nav-bar").find("li").each(function() {
+			$(this).removeClass("active");
+		});
+	});
+}
 
 $(document).pjax('a[data-pjax]', '#container', { fragment: '#container', timeout: 10000 });
+$(document).on({
+	'pjax:end': function() {
+		paginatorModify();
+		afterPjax();
+		
+	}
+});

@@ -112,6 +112,10 @@ header nav#nav-bar ul li a:hover {
 	color: rgba(247, 126, 117, 0.9);
 }
 
+header nav#nav-bar ul li.active a {
+	color: #f77e75;
+}
+
 header .social-wrapper {
 	position: absolute;
 	top: 31rem;
@@ -168,17 +172,17 @@ header .social-font a {
 	margin-bottom: 4rem;
 }
 
-#container #main section a {
+#container #main section h1 a {
 	text-decoration: none;
 }
 
-#container #main section a h1 {
+#container #main section h1 a {
 	font-size: 1.3rem;
 	font-weight: normal;
 	color: #4D5157;
 }
 
-#container #main section a h1:hover {
+#container #main section h1 a:hover {
 	color: #f77e75;
 }
 
@@ -203,6 +207,7 @@ header .social-font a {
 	border-radius: 1rem;
 	color: #f77e75; /* #A2A9B2 */
 	text-align: center;
+	text-decoration: none;
 }
 
 #container #main section a.article-more-link:before { /* 居中span */
@@ -247,6 +252,158 @@ header .social-font a {
 	top: 1rem;
 	color: #A2A9B2;
 	font-size: 0.7rem;
+}
+
+	/* paginator */
+#container #main #page-nav {
+	position: relative;
+	width: 15rem;
+	height: 2.5rem;
+	margin: 0 auto;
+}
+
+#container #main #page-nav a.page-number {
+	display: none;
+}
+
+#container #main #page-nav a.extend {
+	position: absolute;
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	top: 50%;
+}
+
+#container #main #page-nav span {
+	position: absolute;
+	color: #7A808A;
+	font-family: "MerriweatherSans Regular";
+	font-size: 1.2rem;
+	top: 1rem;
+}
+
+#container #main #page-nav span.page-number {
+	left: 43%;
+}
+
+#container #main #page-nav span.separator {
+	left: 50%;
+	color: #BEC6D1;
+}
+
+#container #main #page-nav span.total {
+	left: 56%;
+}
+
+#container #main #page-nav a.extend i {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 25px;
+    height: 3px;
+    border-radius: 1.5px;
+    background: rgba(247, 126, 117, 0.5);
+    transition: all 0.15s ease;
+}
+
+#container #main #page-nav a.extend.prev {
+	left: 0;
+} 
+
+#container #main #page-nav a.extend.prev i {
+	transform-origin: 0% 50%;
+}
+
+#container #main #page-nav a.extend.prev i:first-child {
+    transform: translate(0, -1px) rotate(40deg);
+}
+
+#container #main #page-nav a.extend.prev i:last-child {
+    transform: translate(0, 1px) rotate(-40deg);
+}
+
+#container #main #page-nav a.extend.prev:hover i:first-child {
+    transform: translate(0, -1px) rotate(30deg);
+}
+
+#container #main #page-nav a.extend.prev:hover i:last-child {
+    transform: translate(0, 1px) rotate(-30deg);
+}
+
+#container #main #page-nav a.extend.prev:active i:first-child {
+    transform: translate(1px, -1px) rotate(25deg);
+}
+
+#container #main #page-nav a.extend.prev:active i:last-child {
+    transform: translate(1px, 1px) rotate(-25deg);
+}
+
+#container #main #page-nav a.extend.prev.disabled i:first-child {
+    transform: translate(-5px, 0) rotate(0deg);
+}
+
+#container #main #page-nav a.extend.prev.disabled i:last-child {
+    transform: translate(-5px, 0) rotate(0deg);
+}
+
+#container #main #page-nav a.extend.prev.disabled:hover i:first-child {
+    transform: translate(-5px, 0) rotate(0deg);
+}
+
+#container #main #page-nav a.extend.prev.disabled:hover i:last-child {
+    transform: translate(-5px, 0) rotate(0deg);
+}
+
+#container #main #page-nav a.extend.next {
+  	right: 0;
+}
+
+#container #main #page-nav a.extend.next i {
+  transform-origin: 100% 50%;
+}
+
+#container #main #page-nav a.extend.next i:first-child {
+  transform: translate(0, 1px) rotate(40deg);
+}
+
+#container #main #page-nav a.extend.next i:last-child {
+  transform: translate(0, -1px) rotate(-40deg);
+}
+
+#container #main #page-nav a.extend.next:hover i:first-child {
+  transform: translate(0, 1px) rotate(30deg);
+}
+
+#container #main #page-nav a.extend.next:hover i:last-child {
+  transform: translate(0, -1px) rotate(-30deg);
+}
+
+#container #main #page-nav a.extend.next:active i:first-child {
+  transform: translate(1px, 1px) rotate(25deg);
+}
+
+#container #main #page-nav a.extend.next:active i:last-child {
+  transform: translate(1px, -1px) rotate(-25deg);
+}
+
+#container #main #page-nav a.extend.next.disabled i:first-child {
+  transform: translate(5px, 0) rotate(0deg);
+}
+
+#container #main #page-nav a.extend.next.disabled i:last-child {
+  transform: translate(5px, 0) rotate(0deg);
+}
+
+#container #main #page-nav a.extend.next.disabled:hover i:first-child {
+  transform: translate(5px, 0) rotate(0deg);
+}
+
+#container #main #page-nav a.extend.next.disabled:hover i:last-child {
+  transform: translate(5px, 0) rotate(0deg);
+}
+
+#container #main #page-nav a.extend.disabled {
+	opacity: 0.3;
 }
 
 	/* single article */
@@ -338,7 +495,7 @@ footer #footer span {
 	right: 1rem;
 	bottom: 0.5rem;
 	font-size: 1rem;
-	color: #BB8CC2;
+	color: #f77e75;
 	cursor: pointer;
 }
 
@@ -346,11 +503,11 @@ footer #footer span {
  * Animation
  * show all articles
  */
-#all-articles {
+/*#all-articles {
 	position: absolute;
 	left: 1rem;
 	bottom: 0.5rem;
-}
+}*/
 
 	/* avatar animation */
 header #avatar.avatar-animation {
