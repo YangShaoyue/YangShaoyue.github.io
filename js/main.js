@@ -128,6 +128,5 @@ $(document).on({
 	'pjax:end': function() {
 		paginatorModify();
 		afterPjax();
-		
 	}
 });
