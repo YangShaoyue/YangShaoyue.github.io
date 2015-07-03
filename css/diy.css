@@ -17,7 +17,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-size: 62.5%;
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/
 	background: url(../img/ticks.png) repeat;
 }
 
@@ -65,55 +65,61 @@ header #avatar a img {
 	color: #979DA6;
 }
 
-header nav#nav-bar {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: 3.6rem;
-	font-family: "MerriweatherSans Regular";
-	font-size: 0.9rem;
-	font-weight: 600;
-	background: #DBDBDB; /* #DBDBDB */
-	text-align: center;
-	z-index: 9;
-}
+@media screen and (min-width: 900px) {
+	header nav#nav-bar {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 3.6rem;
+		font-family: "MerriweatherSans Regular";
+		font-size: 0.9rem;
+		font-weight: 600;
+		background: #DBDBDB; /* #DBDBDB */
+		text-align: center;
+		z-index: 9;
+	}
 
-header nav#nav-bar:before { /* 居中ul */
-	content: "";
-	display: inline-block;
-	height: 100%;
-	vertical-align: middle;
-}
+	header nav#nav-bar:before { /* 居中ul */
+		content: "";
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+	}
 
-header nav#nav-bar ul {
-	display: inline-block;
-	vertical-align: middle;
-	text-decoration: none;
-}
+	header nav#nav-bar ul {
+		display: inline-block;
+		vertical-align: middle;
+		text-decoration: none;
+	}
 
-header nav#nav-bar ul li {
-	display: inline-block;
-	position: relative;
-	margin-left: 4rem;
-}
+	header nav#nav-bar ul li {
+		display: inline-block;
+		position: relative;
+		margin-left: 4rem;
+	}
 
-header nav#nav-bar ul li:nth-child(1) {
-	margin-left: 0;
-}
+	header nav#nav-bar ul li:nth-child(1) {
+		margin-left: 0;
+	}
 
-header nav#nav-bar ul li a {
-	text-decoration: none;
-	color: #6D727A;
-	-webkit-transition: color 0.3s;
-	transition: color 0.3s;
-}
+	header nav#nav-bar ul li a {
+		text-decoration: none;
+		color: #6D727A;
+		-webkit-transition: color 0.3s;
+		transition: color 0.3s;
+	}
 
-header nav#nav-bar ul li a:hover {
-	color: rgba(247, 126, 117, 0.9);
-}
+	header nav#nav-bar ul li a:hover {
+		color: rgba(247, 126, 117, 0.9);
+	}
 
-header nav#nav-bar ul li.active a {
-	color: #f77e75;
+	header nav#nav-bar ul li.active a {
+		color: #f77e75;
+	}
+
+	#toggle {
+		display: none;
+	}
 }
 
 header .social-wrapper {
@@ -141,7 +147,8 @@ header .social-font a[title="wechat"] {
 header .social-font a {
 	font-size: 1.6rem;
 	color: #4F5359;
-} 
+}
+
 
 /* Article */
 #container {
@@ -173,26 +180,17 @@ header .social-font a {
 }
 
 #container #main section h1 a {
-	text-decoration: none;
-}
-
-#container #main section h1 a {
 	font-size: 1.3rem;
 	font-weight: normal;
 	color: #4D5157;
+	text-decoration: none;
 }
 
 #container #main section h1 a:hover {
 	color: #f77e75;
 }
 
-#container #main section div.excerpt {
-	font-family: "Roboto Regular", '微软雅黑';
-	font-size: 0.9rem;
-	color: #646A70;
-	line-height: 22px;
-	border-bottom: 1px solid #BEC6D1;
-}
+
 
 	/* more link */
 #container #main section a.article-more-link {
@@ -203,9 +201,9 @@ header .social-font a {
 	font-size: 0.7rem;
 	width: 5rem;
 	height: 2rem;
-	border: 1px solid #f77e75; /* #A2A9B2 */
+	border: 1px solid #f77e75;
 	border-radius: 1rem;
-	color: #f77e75; /* #A2A9B2 */
+	color: #f77e75;
 	text-align: center;
 	text-decoration: none;
 }
@@ -222,7 +220,7 @@ header .social-font a {
 	vertical-align: middle;
 }
 
-#container #main section a.article-more-link i {
+#container #main section a.article-more-link i { /* 垂直居中 */
 	display: inline-block;
 	position: absolute;
 	width: 12px;
@@ -430,21 +428,9 @@ header .social-font a {
 }
 
 	/* single article */
-#container #main article header h1 {
-	font-family: "MerriweatherSans Regular", '微软雅黑';
-	font-size: 1.7rem;
-	font-weight: normal;
-	color: #4F5359;
-}
 
-#container #main article header p {
-	font-family: "MerriweatherSans Regular", '微软雅黑';
-	color: #A2A9B2;
-	font-size: 0.7rem;
-}
 
 #container #main article .article-content p {
-	font-family: "Roboto Regular", '微软雅黑';
 	font-size: 1rem;
 	color: #646A70;
 	line-height: 26px;
@@ -456,7 +442,6 @@ header .social-font a {
 	height: 70%;
 	top: 20%;
 	left: 0;
-
 }
 
 #container #main nav.article-nav .next {
@@ -513,7 +498,7 @@ footer #footer p.copyright a {
 	color: #DE9DD6;
 }
 
-footer #footer span {
+footer #footer span.cr-font {
 	position: fixed;
 	right: 1rem;
 	bottom: 0.5rem;
@@ -533,79 +518,86 @@ footer #footer span {
 }*/
 
 	/* avatar animation */
-header #avatar.avatar-animation {
-	position: fixed;
-	left: 4rem;
-	top: -4rem;
-	transform: scale(0.3);
-	z-index: 10;
-	-webkit-animation: avatar_animation 1s forwards;
-	animation: avatar_animation 1s forwards;
-}
-
-@-webkit-keyframes avatar_animation {
-	0% {
-		left: 50%;
-		top: 14rem;
-	}
-
-	100% {
+@media screen and (min-width: 900px) {
+	header #avatar.avatar-animation {
+		position: fixed;
 		left: 4rem;
 		top: -4rem;
-		transform: scale(0.3);
-		z-index: 10;	
-	}
-}
-
-@keyframes avatar_animation {
-	0% {
-		left: 50%;
-		top: 14rem;
+		/*-webkit-transform: scale(0.3);
+		transform: scale(0.3);*/
+		z-index: 10;
+		-webkit-animation: avatar_animation 1s forwards;
+		animation: avatar_animation 1s forwards;
 	}
 
-	100% {
-		left: 4rem;
-		top: -4rem;
-		transform: scale(0.3);
-		z-index: 10;	
+	@-webkit-keyframes avatar_animation {
+		0% {
+			left: 50%;
+			top: 14rem;
+		}
+
+		100% {
+			left: 4rem;
+			top: -4rem;
+			-webkit-transform: scale(0.3);
+			transform: scale(0.3);
+			z-index: 10;	
+		}
 	}
-}
 
-#author h2.subtitle-animation {
-	position: fixed;
-	left: 7rem;
-	top: 3.7rem; 
-}
+	@keyframes avatar_animation {
+		0% {
+			left: 50%;
+			top: 14rem;
+		}
 
-header .social-animation {
-	position: fixed;
-	width: 6rem;
-	height: 1.3rem;
-	right: 1rem;
-	top: 1.3rem;
-	z-index: 10;
-}
+		100% {
+			left: 4rem;
+			top: -4rem;
+			-webkit-transform: scale(0.3);
+			transform: scale(0.3);
+			z-index: 10;	
+		}
+	}
 
-header .social-animation .social-font {
-	width: 6rem;
-	height: 1.3rem;
-}
+	#author h2.subtitle-animation {
+		position: fixed;
+		left: 7rem;
+		top: 3.7rem;
+		z-index: 10;
+		background: url(../img/ticks.png) repeat;
+	}
 
-header .social-animation .social-font a {
-	font-size: 1rem;
-	color: #7D848C;
-} 
+	header .social-animation {
+		position: fixed;
+		width: 6rem;
+		height: 1.3rem;
+		right: 1rem;
+		top: 1.3rem;
+		z-index: 10;
+	}
 
-header .social-animation .social-font a:hover {
-	color: #4F5359;
-}
+	header .social-animation .social-font {
+		width: 6rem;
+		height: 1.3rem;
+	}
 
-header .social-font a[title="zhihu"] {
-	margin-left: 1rem;
-}
+	header .social-animation .social-font a {
+		font-size: 1rem;
+		color: #7D848C;
+	} 
 
-header .social-font a[title="wechat"] {
-	margin-left: 1rem;
+	header .social-animation .social-font a:hover {
+		color: #4F5359;
+	}
+
+	header .social-font a[title="zhihu"] {
+		margin-left: 1rem;
+	}
+
+	header .social-font a[title="wechat"] {
+		margin-left: 1rem;
+	}
 }
 
 	/* footer animation */
@@ -620,4 +612,287 @@ footer.footer-animation1 {
 
 footer.footer-animation2 {
 	right: 2.5rem;
+}
+
+@media screen and (max-width: 900px) {
+	header nav#nav-bar {
+		position: absolute;
+		top: 0;
+		width: 15rem;
+		height: 100%;
+		background: #DBDBDB;
+		text-align: center;
+		font-family: "MerriweatherSans Regular";
+		margin-left: -15rem;
+		-webkit-transition: margin-left 0.5s;
+		transition: margin-left 0.5s;
+		z-index: 9;
+	}
+
+	header nav#nav-bar.stretch {
+		margin-left: 0;
+	}
+
+	header nav#nav-bar ul {
+		margin-top: 17rem;
+		margin-left: 2.9rem;
+		display: flex;
+		width: 4rem;
+		height: 30%;
+		flex-direction: column;
+		justify-content: space-between;
+		list-style: none;
+
+	}
+
+	header nav#nav-bar ul li a {
+		color: #6D727A;
+		text-decoration: none;
+		font-size: 0.8rem;
+		font-weight: 600;
+		-webkit-transition: color 0.3s;
+		transition: color 0.3s;
+	}
+
+	header nav#nav-bar ul li a:hover {
+	  	color: rgba(247, 126, 117, 0.9);
+	}
+
+	header #avatar.avatar-animation {
+		position: absolute;
+		left: 50%;
+		top: 14rem;
+		z-index: 10;
+		-webkit-animation: avatar_animation1 0.8s forwards;
+      	animation: avatar_animation1 0.8s forwards;
+	}
+
+	header #avatar.stretch1 {
+		left: 7.5rem;
+		-webkit-transition: margin-left 0.5s; /* 使用left无效，可能和上面的animation的forwards值有关 */
+		transition: margin-left 0.5s;
+
+	}
+
+	header #avatar.stretch1.stretch2 {
+		margin-left: -22.5rem;
+	}
+
+	@-webkit-keyframes avatar_animation1 {
+		0% {
+			left: 50%;
+			top: 14rem;
+		}
+
+		100% {
+	        left: 7.5rem;
+	        top: -2rem;
+	        -webkit-transform: scale(0.5);
+	        transform: scale(0.5);
+   		}
+	}
+
+	@keyframes avatar_animation1 {
+		0% {
+			left: 50%;
+			top: 14rem;
+		}
+
+		100% {
+	        left: 7.5rem;
+	        top: -2rem;
+	        -webkit-transform: scale(0.4);
+	        transform: scale(0.4);
+   		}
+	}
+
+	#author h2.subtitle-animation {
+		position: absolute;
+		left: 3rem;
+		top: 4.8rem;
+		z-index: 10;
+		-webkit-transition: left 0.5s;
+		transition: left 0.5s;
+	}
+
+	#author h2.subtitle-animation.stretch {
+		left: -18rem;
+	}
+
+	header div.separator {
+		position: absolute;
+		left: -17.5rem;
+		top: 13rem;
+		width: 10rem;
+		border: 1px solid rgba(247, 126, 117, 0.6);
+		z-index: 10;
+		-webkit-transition: margin-left 0.5s;
+		transition: margin-left 0.5s;
+	}
+
+	header div.separator.stretch {
+		margin-left: -17.5rem;
+	}
+
+	header div.social-animation {
+  		position: absolute;
+  		width: 6rem;
+  		height: 1.3rem;
+  		left: 4.6rem;
+  		top: 33rem;
+  		z-index: 10;
+  		-webkit-transition: left 0.5s;
+		transition: left 0.5s;
+	}
+
+	header div.social-animation.stretch {
+		left: -19.5rem;
+	}
+
+	header .social-animation .social-font {
+		width: 6rem;
+		height: 1.3rem;
+	}
+
+	header .social-animation .social-font a {
+	  	font-size: 1.2rem;
+	  	color: #7D848C;
+	} 
+
+	header .social-animation .social-font a:hover {
+	  	color: #4F5359;
+	}
+
+	header .social-font a[title="zhihu"] {
+	 	margin-left: 1rem;
+	}
+
+	header .social-font a[title="wechat"] {
+	  	margin-left: 1rem;
+	}
+
+	/* footer animation */
+	footer.footer-animation1 {
+	  	position: absolute;
+	  	left: 3.6rem;
+	  	bottom: 0;
+	  	width: 8rem;
+	  	z-index: 10;
+	  	-webkit-transition: left 0.5s;
+	  	transition: left 0.5s;
+	}
+
+	footer.footer-animation1.stretch {
+		left: -18.6rem;
+	}
+
+	header #toggle {
+		position: relative;
+		top: -14.5rem;
+		left: 0.5rem;
+		width: 26px;
+    	height: 13px;
+    	/*margin-left: 0.5rem;*/
+		-webkit-transition: left 0.5s;
+		transition: left 0.5s;
+		
+	}
+
+	header #toggle.stretch1 {
+		top: 0.5rem;
+		left: 15.5rem;
+	}
+
+	header #toggle.stretch2 {
+		top: 0.5rem;
+		left: 0.5rem;
+	}
+
+	header #toggle .bar {
+	    position: absolute;
+	    display: block;
+	    width: 18px;
+	    height: 1px;
+	    border: 1px solid #979DA6;
+	    border-radius: 1px;
+	    background: #979DA6;
+	}
+
+	header #toggle .top {
+	    top: 0;
+	    left: 0;
+	    -webkit-transition: all 0.5s;
+	    transition: all 0.5s;
+	}
+
+	header #toggle .middle {
+	    top: 5px;
+	    -webkit-transition: all 0.5s;
+	    transition: all 0.5s;
+	}
+
+	header #toggle .bottom {
+	    bottom: 0;
+	    left: 0;
+	    -webkit-transition: all 0.5s;
+	    transition: all 0.5s;
+	}
+
+	header #toggle.stretch1 .top {
+	    top: 7px;
+	    left: 1px;
+	    -webkit-transform: rotate(45deg);
+	    transform: rotate(45deg);
+	    -webkit-transition: all 0.5s;
+	    transition: all 0.5s;
+	}
+
+	header #toggle.stretch1 .middle {
+	    display: none;
+	    -webkit-transition: all 0.5s;
+	    transition: all 0.5s;
+	}
+
+	header #toggle.stretch1 .bottom {
+	    bottom: 7px;
+	    left: 1px;
+	    -webkit-transform: rotate(-45deg);
+	    transform: rotate(-45deg);
+	    -webkit-transition: all 0.5s;
+	    transition: all 0.5s;
+	}
+
+	header #toggle.stretch1.stretch2 .top {
+		top: 0;
+	    left: 0;
+	    -webkit-transform: rotate(0);
+	    transform: rotate(0);
+	}
+
+	header #toggle.stretch1.stretch2 .middle {
+		display: block;
+	}
+
+	header #toggle.stretch1.stretch2 .bottom {
+		bottom: 0;
+		left: 0;
+		-webkit-transform: rotate(0);
+	    transform: rotate(0);
+	}
+
+	body.overflow-hidden {
+		overflow: hidden;
+	}
+
+	#container #main section {
+		top: -5rem;
+	}
+
+	#container #main #page-nav {
+		position: relative;
+		top: -5rem;
+  		width: 15rem;
+  		height: 2.5rem;
+  		margin-bottom: -5rem;
+	}
 }
