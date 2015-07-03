@@ -23,52 +23,57 @@
     
     <link rel="stylesheet" href="/css/font-awesome-4.3.0/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="/css/diy.css" type="text/css">
+    <link rel="stylesheet" href="/css/markdown.css" type="text/css">
 </head>
 
   <body>
     <header>
-      <div>
-		
-			<div id="avatar">
-				<a href="/"><img src="/img/me.jpg" alt="Yang Shaoyue" title="Yang Shaoyue"/></a>
-				<a href="/"><img src="/img/avatar.jpg" alt="Yang Shaoyue" title="Yang Shaoyue"/></a>
-			</div>
+      <div class="nav-wrapper">
+	
+	<div id="avatar">
+		<a href="/"><img src="/img/me.jpg" alt="Yang Shaoyue" title="Yang Shaoyue"/></a>
+		<a href="/"><img src="/img/avatar.jpg" alt="Yang Shaoyue" title="Yang Shaoyue"/></a>
+	</div>
+	
+	<div id="author">
+		<h1 class="site-name"><a href="/" title="Yang Shaoyue">Yang Shaoyue</a></h1>
+		<h2 class="blog-motto">no path but through</h2>
+	</div>
+	<div class="social-wrapper">
+		<div class="social-font clearfix">
 			
-			<div id="author">
-				<h1 class="site-name"><a href="/" title="Yang Shaoyue">Yang Shaoyue</a></h1>
-				<h2 class="blog-motto">no path but through</h2>
-			</div>
-			<div class="social-wrapper">
-				<div class="social-font clearfix">
-					
-					<a href="https://github.com/YangShaoyue" target="_blank" title="github"><i class="fa fa-github"></i></a>
-					
-					
-					<a href="https://zhihu.com/people/feng-qi-ru-meng" target="_blank" title="zhihu"><i class="fa fa-paw"></i></a>
-					
-					
-					<a href="https://zhihu.com/people/feng-qi-ru-meng" target="_blank" title="wechat"><i class="fa fa-weixin"></i></a>
-						
-				</div>
-			</div>
+			<a href="https://www.github.com/YangShaoyue" target="_blank" title="github"><i class="fa fa-github"></i></a>
 			
-			<nav id="nav-bar">
-				<ul>
-					
-						<li><a data-pjax href="/">Home</a></li>
-					
-						<li><a data-pjax href="/categories/javascript/">JavaScript</a></li>
-					
-						<li><a data-pjax href="/categories/css/">CSS</a></li>
-					
-						<li><a data-pjax href="/categories/library/">Library</a></li>
-					
-						<li><a data-pjax href="/categories/music/">Music</a></li>
-					
-				</ul>
-			</nav>			
+			
+			<a href="https://www.zhihu.com/people/feng-qi-ru-meng" target="_blank" title="zhihu"><i class="fa fa-paw"></i></a>
+			
+			
+			<a href="https://www.zhihu.com/people/feng-qi-ru-meng" target="_blank" title="wechat"><i class="fa fa-weixin"></i></a>
+				
+		</div>
+	</div>
+			
+	<nav id="nav-bar">
+		<ul>
+			
+				<li><a data-pjax href="/">Home</a></li>
+			
+				<li><a data-pjax href="/categories/javascript/">JavaScript</a></li>
+			
+				<li><a data-pjax href="/categories/css/">CSS</a></li>
+			
+				<li><a data-pjax href="/categories/library/">Library</a></li>
+			
+				<li><a data-pjax href="/categories/music/">Music</a></li>
+			
+		</ul>
+	</nav>			
 </div>
-
+<div id="toggle">
+	<span class="top bar"></span>
+	<span class="middle bar"></span>
+	<span class="bottom bar"></span>
+</div>
     </header>
     <div id="container">
       <div id="main">
@@ -107,11 +112,14 @@
 
   
     
-      <div class="excerpt" itemprop="description2" ><p>应用在容器元素上：</p>
-<p>display: display: flex; /<em> inline-flex </em>/;</p>
-<p>CSS的columns属性在容器上无效</p>
-<p>flex-direction: row | row-reverse | column | column-reverse;</p>
-<p>用来创建主轴，从而定义了伸缩项目放置在容器中的方向<br></div>
+      <div class="excerpt" itemprop="description2" ><h2 id="应用在容器元素上:">应用在容器元素上:</h2><pre><code><span class="rule"><span class="attribute">display</span>:<span class="value">flex</span></span>; <span class="comment">/* inline-flex */</span>
+</code></pre><p>CSS的columns属性在容器上无效</p>
+<pre><code>flex-direction:row |<span class="string"> row-reverse </span>|<span class="string"> column </span>|<span class="string"> column-reverse</span>
+</code></pre><p>用来创建主轴，从而定义了伸缩项目放置在容器中的方向</p>
+<p><strong>row(默认)</strong>：在“ltr”排版方式下从左向右排列；在“rtl”排版方式下从右向左排列</p>
+<p><strong>row-reverse</strong>：与row排列方向相反</p>
+<p><strong>column</strong>：类似于row，不过是从上到下排列</p>
+<p><strong>column-reverse</strong>：与column排列方向相反<br></div>
       
         <a class="article-more-link" data-pjax href="/2015/06/20/Flex布局/#more">
           <i class="fa fa-arrow-right"></i>
@@ -131,9 +139,9 @@
 </div>
     </div>
     <footer><div id="footer" >
-	<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">Hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
+	<p class="copyright"><span class="power">Powered by </span><a href="http://hexo.io" target="_blank" title="hexo">Hexo</a> <i class="fa fa-copyright"></i> 2015 
 	
-	<a href="http://yoursite.com" target="_blank" title="Yang Shaoyue">Yang Shaoyue</a>
+	<span>Yang Shaoyue</span>
 	
 	</p>
 </div></footer>

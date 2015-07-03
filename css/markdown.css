@@ -1,0 +1,68 @@
+/* expert */
+#container #main section div.excerpt {
+	font-family: "Roboto Regular", '微软雅黑';
+	font-size: 0.9rem;
+	color: #646A70;
+	line-height: 22px;
+	border-bottom: 1px solid #BEC6D1;
+}
+
+#container #main section div.excerpt h2 {
+	font-size: 1.1rem;
+}
+
+#container #main section div.excerpt code {
+	font-family: Consolas, '微软雅黑';
+	color: #2B2D33;
+}
+
+/* content */
+#container #main article header h1 {
+	font-family: "MerriweatherSans Regular", '微软雅黑';
+	font-size: 1.7rem;
+	font-weight: normal;
+	color: #4F5359;
+}
+
+#container #main article header p {
+	font-family: "MerriweatherSans Regular", '微软雅黑';
+	color: #A2A9B2;
+	font-size: 0.7rem;
+}
+
+#container #main article .article-content {
+	font-family: "Roboto Regular", '微软雅黑';
+}
+
+#container #main article .article-content h2 {
+	font-size: 1.1rem;
+	color: #646A70;
+}
+
+#container #main article .article-content pre {
+	border-left: 4px solid #99A2AB;
+	padding-left: 7px;
+}
+
+#container #main article .article-content code {
+	font-family: Consolas, '微软雅黑';
+	font-size: 17px;
+	color: #2B2D33;
+}
+
+#container #main article .article-content ul,
+#container #main article .article-content ol {
+	color: #A2A9B2;
+}
+
+#container #main article .article-content ul li,
+#container #main article .article-content ol li {
+	margin: 0.5rem;
+	font-size: 1rem;
+	color: #646A70;
+}
+
+#container #main article .article-content ul li a {
+	text-decoration: none;
+	color: #646A70;
+}

@@ -9,13 +9,17 @@
     
     <meta name="author" content="Yang Shaoyue">
     
-    <meta name="description" content=":before :after作用：It creates a  phoney element and inserts it before or after the content of the element that you’ve targeted.
- 1 #example:before { 2     content: “#”; 3 } 4 5 #example:after { 6     content: “.”; 7 } 
+    <meta name="description" content=":before :after：It creates a  phoney element and inserts it before or after the content of the element that you’ve targeted.
+#example:before {
+    content: &quot;#&quot;;
+}
+
+#example:after {
+    content: &quot;.&quot;;
+} 
 
 we’re targeting the same element using #example:before and #example:after. Strictly speaking, they’re the pseudo-elements in the code.
-
 Without the content property, pseudo-elements are useless. So while the pseudo-element selector itself is needed to target the element, you won’t be able to insert anything without adding the content property.
-
 
 You could leave the content property empty and just treat the pseudo-element like a content-less box, like this:">
     
@@ -31,52 +35,57 @@ You could leave the content property empty and just treat the pseudo-element lik
     
     <link rel="stylesheet" href="/css/font-awesome-4.3.0/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="/css/diy.css" type="text/css">
+    <link rel="stylesheet" href="/css/markdown.css" type="text/css">
 </head>
 
   <body>
     <header>
-      <div>
-		
-			<div id="avatar">
-				<a href="/"><img src="/img/me.jpg" alt="Yang Shaoyue" title="Yang Shaoyue"/></a>
-				<a href="/"><img src="/img/avatar.jpg" alt="Yang Shaoyue" title="Yang Shaoyue"/></a>
-			</div>
+      <div class="nav-wrapper">
+	
+	<div id="avatar">
+		<a href="/"><img src="/img/me.jpg" alt="Yang Shaoyue" title="Yang Shaoyue"/></a>
+		<a href="/"><img src="/img/avatar.jpg" alt="Yang Shaoyue" title="Yang Shaoyue"/></a>
+	</div>
+	
+	<div id="author">
+		<h1 class="site-name"><a href="/" title="Yang Shaoyue">Yang Shaoyue</a></h1>
+		<h2 class="blog-motto">no path but through</h2>
+	</div>
+	<div class="social-wrapper">
+		<div class="social-font clearfix">
 			
-			<div id="author">
-				<h1 class="site-name"><a href="/" title="Yang Shaoyue">Yang Shaoyue</a></h1>
-				<h2 class="blog-motto">no path but through</h2>
-			</div>
-			<div class="social-wrapper">
-				<div class="social-font clearfix">
-					
-					<a href="https://github.com/YangShaoyue" target="_blank" title="github"><i class="fa fa-github"></i></a>
-					
-					
-					<a href="https://zhihu.com/people/feng-qi-ru-meng" target="_blank" title="zhihu"><i class="fa fa-paw"></i></a>
-					
-					
-					<a href="https://zhihu.com/people/feng-qi-ru-meng" target="_blank" title="wechat"><i class="fa fa-weixin"></i></a>
-						
-				</div>
-			</div>
+			<a href="https://www.github.com/YangShaoyue" target="_blank" title="github"><i class="fa fa-github"></i></a>
 			
-			<nav id="nav-bar">
-				<ul>
-					
-						<li><a data-pjax href="/">Home</a></li>
-					
-						<li><a data-pjax href="/categories/javascript/">JavaScript</a></li>
-					
-						<li><a data-pjax href="/categories/css/">CSS</a></li>
-					
-						<li><a data-pjax href="/categories/library/">Library</a></li>
-					
-						<li><a data-pjax href="/categories/music/">Music</a></li>
-					
-				</ul>
-			</nav>			
+			
+			<a href="https://www.zhihu.com/people/feng-qi-ru-meng" target="_blank" title="zhihu"><i class="fa fa-paw"></i></a>
+			
+			
+			<a href="https://www.zhihu.com/people/feng-qi-ru-meng" target="_blank" title="wechat"><i class="fa fa-weixin"></i></a>
+				
+		</div>
+	</div>
+			
+	<nav id="nav-bar">
+		<ul>
+			
+				<li><a data-pjax href="/">Home</a></li>
+			
+				<li><a data-pjax href="/categories/javascript/">JavaScript</a></li>
+			
+				<li><a data-pjax href="/categories/css/">CSS</a></li>
+			
+				<li><a data-pjax href="/categories/library/">Library</a></li>
+			
+				<li><a data-pjax href="/categories/music/">Music</a></li>
+			
+		</ul>
+	</nav>			
 </div>
-
+<div id="toggle">
+	<span class="top bar"></span>
+	<span class="middle bar"></span>
+	<span class="bottom bar"></span>
+</div>
     </header>
     <div id="container">
       <div id="main" class="post" itemscope itemprop="blogPost">
@@ -93,24 +102,58 @@ You could leave the content property empty and just treat the pseudo-element lik
 	<div class="article-content">
 		
 		
-		<p>:before :after作用：It creates a  phoney element and inserts it before or after the content of the element that you’ve targeted.</p>
-<p> 1 #example:before {<br> 2     content: “#”;<br> 3 }<br> 4<br> 5 #example:after {<br> 6     content: “.”;<br> 7 } </p>
-<ol>
-<li><p>we’re targeting the same element using #example:before and #example:after. Strictly speaking, they’re the pseudo-elements in the code.</p>
-</li>
-<li><p>Without the content property, pseudo-elements are useless. So while the pseudo-element selector itself is needed to target the element, you won’t be able to insert anything without adding the content property.</p>
-</li>
+		<p><strong>:before :after</strong>：It creates a  phoney element and inserts it before or after the content of the element that you’ve targeted.</p>
+<pre><code><span class="id">#example</span><span class="pseudo">:before</span> <span class="rules">{
+    <span class="rule"><span class="attribute">content</span>:<span class="value"> <span class="string">"#"</span></span></span>;
+}</span>
+
+<span class="id">#example</span><span class="pseudo">:after</span> <span class="rules">{
+    <span class="rule"><span class="attribute">content</span>:<span class="value"> <span class="string">"."</span></span></span>;
+}</span> 
+</code></pre><ol>
+<li>we’re targeting the same element using <code>#example:before</code> and <code>#example:after</code>. Strictly speaking, they’re the pseudo-elements in the code.</li>
+<li>Without the <strong>content</strong> property, pseudo-elements are useless. So while the pseudo-element selector itself is needed to target the element, you won’t be able to insert anything without adding the content property.</li>
 </ol>
-<p>You could leave the content property empty and just treat the pseudo-element like a content-less box, like this:<br><a id="more"></a><br> 1 #example:before {<br> 2     content: “”;<br> 3     display:block;<br> 4     width: 100px;<br> 5     height: 100px;<br> 6 } </p>
-<p>However, you can’t remove the content property altogether. If you did, the pseudo-element wouldn’t work.</p>
-<p> 1 :before {<br> 2     content: “#”;<br> 3 } </p>
-<p>While the above is valid, it’s pretty useless. The code will insert a hash symbol before the content in each element in the DOM. Even if you removed the <body> tag and all of its content, you’d still see two hash symbols on the page: one in the <html> element, and one in the <body> tag, which the browser automatically constructs.</body></html></body></p>
-<p>the content that is inserted is not visible in the page’s source. It’s visible only in the CSS.</p>
-<p>the inserted element is by default an inline element (or, in HTML5 terms, in the category of text-level semantics). So, to give the inserted element a height, padding, margins and so forth, you’ll usually have to define it explicitly as a block-level element.</p>
-<p>typical CSS inheritance rules apply to the inserted elements. If you had, for example, a font stack of Helvetica, Arial, sans-serif applied to the <body> element of the document, then the pseudo-element would inherit that font stack the same as any other element would.</body></p>
+<p>You could leave the content property empty and just treat the pseudo-element like a content-less box, like this:<br><a id="more"></a></p>
+<pre><code><span class="id">#example</span><span class="pseudo">:before</span> <span class="rules">{
+    <span class="rule"><span class="attribute">content</span>:<span class="value"> <span class="string">""</span></span></span>;
+    <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;
+    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100px</span></span></span>;
+    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100px</span></span></span>;
+}</span>
+</code></pre><p>However, you can’t remove the content property altogether. If you did, the pseudo-element wouldn’t work.</p>
+<pre><code><span class="pseudo">:before</span> <span class="rules">{
+    <span class="rule"><span class="attribute">content</span>:<span class="value"> <span class="string">"#"</span></span></span>;
+}</span>
+</code></pre><p>While the above is valid, it’s pretty useless. The code will insert a hash symbol before the content in each element in the DOM. Even if you removed the <code>&lt;body&gt;</code> tag and all of its content, you’d still see two hash symbols on the page: one in the <code>&lt;html&gt;</code> element, and one in the <code>&lt;body&gt;</code> tag, which the browser automatically constructs.</p>
+<p><strong>the content that is inserted is not visible in the page’s source. It’s visible only in the CSS.</strong></p>
+<p>the inserted element is by default an <strong>inline element</strong> (or, in HTML5 terms, in the category of text-level semantics). So, to give the inserted element a height, padding, margins and so forth, you’ll usually have to define it explicitly as a block-level element.</p>
+<p>typical CSS inheritance rules apply to the inserted elements. If you had, for example, a font stack of Helvetica, Arial, sans-serif applied to the <code>&lt;body&gt;</code> element of the document, then the pseudo-element would inherit that font stack the same as any other element would.</p>
 <p>The content that’s injected will be child content in relation to the targeted element, but it will be placed “before” or “after” any other content in that element.</p>
-<pre><code>&lt;<span class="tag">p</span> class=<span class="string">"box"</span>&gt;Other <span class="attribute">content</span>&lt;/p&gt;
-</code></pre><p> 1 p.box {<br> 2     width:300px;<br> 3     border: solid 1px white;<br> 4     padding: 20px;<br> 5 }<br> 6<br> 7 p.box:before {<br> 8     content: “#”;<br> 9     border: 1px solid white;<br>10     padding: 2px;<br>11     margin: 0 10px 0 0;<br>12 } </p>
+<pre><code>&lt;p class="box"&gt;Other content&lt;/p&gt;
+
+p.box {
+    width: 300px<span class="comment">;</span>
+    border: solid 1px white<span class="comment">;</span>
+    padding: 20px<span class="comment">;</span>
+}
+
+p.box:before {
+    content: "#"<span class="comment">;</span>
+    border: 1px solid white<span class="comment">;</span>
+    padding: 2px<span class="comment">;</span>
+    margin: 0 10px 0 0<span class="comment">;</span>
+}
+</code></pre><p><img src="http://7xjsho.com1.z0.glb.clouddn.com/pseudo-element1.jpg" alt="pseudo-element:before"></p>
+<h2 id="Inserting_Non-Text_Content:">Inserting Non-Text Content:</h2><pre><code><span class="tag">p</span><span class="pseudo">:before</span> {
+    <span class="attribute">content</span>: <span class="function">url</span>(<span class="string">image.jpg</span>);
+}
+</code></pre><p>You also have the option to include a function in the form of <strong>attr(X)</strong>. This function, according to the spec, ‘returns as a string the value of attribute X for the subject of the selector.’</p>
+<pre><code><span class="rule"><span class="attribute">a</span>:<span class="value">after {
+    content: <span class="function">attr</span>(href)</span></span>;
+}
+</code></pre><p>the <code>attr()</code> function takes the value of the specified attribute and places it as text content to be inserted as a pseudo-element.</p>
+<p>While being able to grab the <code>title</code> or <code>alt</code> text of an image and display it on the page as a pseudo-element would be practical, this isn’t possible. Remember that the pseudo-element must be a child of the element to which it is being applied. Images, which are void (or empty) elements, don’t have child elements, so it wouldn’t work in this case. The same would apply to other void elements, such as <code>&lt;input&gt;</code>.</p>
   
 	</div>
 			       
@@ -131,9 +174,9 @@ You could leave the content property empty and just treat the pseudo-element lik
 </div>  
     </div>
     <footer><div id="footer" >
-	<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">Hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
+	<p class="copyright"><span class="power">Powered by </span><a href="http://hexo.io" target="_blank" title="hexo">Hexo</a> <i class="fa fa-copyright"></i> 2015 
 	
-	<a href="http://yoursite.com" target="_blank" title="Yang Shaoyue">Yang Shaoyue</a>
+	<span>Yang Shaoyue</span>
 	
 	</p>
 </div></footer>

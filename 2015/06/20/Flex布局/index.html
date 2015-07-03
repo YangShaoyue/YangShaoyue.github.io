@@ -9,11 +9,14 @@
     
     <meta name="author" content="Yang Shaoyue">
     
-    <meta name="description" content="应用在容器元素上：
-display: display: flex; / inline-flex /;
+    <meta name="description" content="应用在容器元素上:display:flex; /* inline-flex */
 CSS的columns属性在容器上无效
-flex-direction: row | row-reverse | column | column-reverse;
-用来创建主轴，从而定义了伸缩项目放置在容器中的方向">
+flex-direction:row | row-reverse | column | column-reverse
+用来创建主轴，从而定义了伸缩项目放置在容器中的方向
+row(默认)：在“ltr”排版方式下从左向右排列；在“rtl”排版方式下从右向左排列
+row-reverse：与row排列方向相反
+column：类似于row，不过是从上到下排列
+column-reverse：与column排列方向相反">
     
     <meta name="keywords" content="css">
     
@@ -27,52 +30,57 @@ flex-direction: row | row-reverse | column | column-reverse;
     
     <link rel="stylesheet" href="/css/font-awesome-4.3.0/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="/css/diy.css" type="text/css">
+    <link rel="stylesheet" href="/css/markdown.css" type="text/css">
 </head>
 
   <body>
     <header>
-      <div>
-		
-			<div id="avatar">
-				<a href="/"><img src="/img/me.jpg" alt="Yang Shaoyue" title="Yang Shaoyue"/></a>
-				<a href="/"><img src="/img/avatar.jpg" alt="Yang Shaoyue" title="Yang Shaoyue"/></a>
-			</div>
+      <div class="nav-wrapper">
+	
+	<div id="avatar">
+		<a href="/"><img src="/img/me.jpg" alt="Yang Shaoyue" title="Yang Shaoyue"/></a>
+		<a href="/"><img src="/img/avatar.jpg" alt="Yang Shaoyue" title="Yang Shaoyue"/></a>
+	</div>
+	
+	<div id="author">
+		<h1 class="site-name"><a href="/" title="Yang Shaoyue">Yang Shaoyue</a></h1>
+		<h2 class="blog-motto">no path but through</h2>
+	</div>
+	<div class="social-wrapper">
+		<div class="social-font clearfix">
 			
-			<div id="author">
-				<h1 class="site-name"><a href="/" title="Yang Shaoyue">Yang Shaoyue</a></h1>
-				<h2 class="blog-motto">no path but through</h2>
-			</div>
-			<div class="social-wrapper">
-				<div class="social-font clearfix">
-					
-					<a href="https://github.com/YangShaoyue" target="_blank" title="github"><i class="fa fa-github"></i></a>
-					
-					
-					<a href="https://zhihu.com/people/feng-qi-ru-meng" target="_blank" title="zhihu"><i class="fa fa-paw"></i></a>
-					
-					
-					<a href="https://zhihu.com/people/feng-qi-ru-meng" target="_blank" title="wechat"><i class="fa fa-weixin"></i></a>
-						
-				</div>
-			</div>
+			<a href="https://www.github.com/YangShaoyue" target="_blank" title="github"><i class="fa fa-github"></i></a>
 			
-			<nav id="nav-bar">
-				<ul>
-					
-						<li><a data-pjax href="/">Home</a></li>
-					
-						<li><a data-pjax href="/categories/javascript/">JavaScript</a></li>
-					
-						<li><a data-pjax href="/categories/css/">CSS</a></li>
-					
-						<li><a data-pjax href="/categories/library/">Library</a></li>
-					
-						<li><a data-pjax href="/categories/music/">Music</a></li>
-					
-				</ul>
-			</nav>			
+			
+			<a href="https://www.zhihu.com/people/feng-qi-ru-meng" target="_blank" title="zhihu"><i class="fa fa-paw"></i></a>
+			
+			
+			<a href="https://www.zhihu.com/people/feng-qi-ru-meng" target="_blank" title="wechat"><i class="fa fa-weixin"></i></a>
+				
+		</div>
+	</div>
+			
+	<nav id="nav-bar">
+		<ul>
+			
+				<li><a data-pjax href="/">Home</a></li>
+			
+				<li><a data-pjax href="/categories/javascript/">JavaScript</a></li>
+			
+				<li><a data-pjax href="/categories/css/">CSS</a></li>
+			
+				<li><a data-pjax href="/categories/library/">Library</a></li>
+			
+				<li><a data-pjax href="/categories/music/">Music</a></li>
+			
+		</ul>
+	</nav>			
 </div>
-
+<div id="toggle">
+	<span class="top bar"></span>
+	<span class="middle bar"></span>
+	<span class="bottom bar"></span>
+</div>
     </header>
     <div id="container">
       <div id="main" class="post" itemscope itemprop="blogPost">
@@ -89,11 +97,202 @@ flex-direction: row | row-reverse | column | column-reverse;
 	<div class="article-content">
 		
 		
-		<p>应用在容器元素上：</p>
-<p>display: display: flex; /<em> inline-flex </em>/;</p>
-<p>CSS的columns属性在容器上无效</p>
-<p>flex-direction: row | row-reverse | column | column-reverse;</p>
-<p>用来创建主轴，从而定义了伸缩项目放置在容器中的方向<br><a id="more"></a><br>row(默认)：在“ltr”排版方式下从左向右排列；在“rtl”排版方式下从右向左排列<br>row-reverse：与row排列方向相反<br>column：类似于row，不过是从上到下排列<br>column-reverse：与column排列方向相反</p>
+		<h2 id="应用在容器元素上:">应用在容器元素上:</h2><pre><code><span class="rule"><span class="attribute">display</span>:<span class="value">flex</span></span>; <span class="comment">/* inline-flex */</span>
+</code></pre><p>CSS的columns属性在容器上无效</p>
+<pre><code>flex-direction:row |<span class="string"> row-reverse </span>|<span class="string"> column </span>|<span class="string"> column-reverse</span>
+</code></pre><p>用来创建主轴，从而定义了伸缩项目放置在容器中的方向</p>
+<p><strong>row(默认)</strong>：在“ltr”排版方式下从左向右排列；在“rtl”排版方式下从右向左排列</p>
+<p><strong>row-reverse</strong>：与row排列方向相反</p>
+<p><strong>column</strong>：类似于row，不过是从上到下排列</p>
+<p><strong>column-reverse</strong>：与column排列方向相反<br><a id="more"></a><br><img src="http://7xjsho.com1.z0.glb.clouddn.com/flex-direction1.svg" alt="flex-direction"></p>
+<pre><code><span class="rule"><span class="attribute">flex-wrap</span>:<span class="value">nowrap | wrap | wrap-reverse</span></span>;
+</code></pre><p><strong>nowrap</strong>: 伸缩容器<strong>单行</strong>显示，“ltr”排版下，伸缩项目从左到右排列；“rtl”排版下，伸缩项目从右向左排列</p>
+<p><strong>wrap</strong>：伸缩容器<strong>多行</strong>显示，“ltr”排版下，伸缩项目从左到右排列；“rtl”排版上伸缩项目从右向左排列。</p>
+<p><strong>wrap-reverse</strong>：多行显示，和wrap相反<br><img src="http://7xjsho.com1.z0.glb.clouddn.com/flex-wrap.svg" alt="flex-wrap"></p>
+<pre><code><span class="rule"><span class="attribute">flex-flow</span>:<span class="value"> &lt;<span class="string">'flex-direction'</span>&gt; || &lt;<span class="string">'flex-wrap'</span>&gt;</span></span>;
+</code></pre><p>是flex-direction和flex-wrap的缩写版本，同时定义了伸缩容器的主轴和侧轴，默认：“row nowrap”</p>
+<pre><code>justify-content: flex-<span class="operator"><span class="keyword">start</span> | flex-<span class="keyword">end</span> | center | <span class="keyword">space</span>-<span class="keyword">between</span> | <span class="keyword">space</span>-around;</span>
+</code></pre><p><strong>flex-start(默认值)</strong>：伸缩项目向一行的起始位置靠齐。</p>
+<p><strong>flex-end</strong>：伸缩项目向一行的结束位置靠齐。</p>
+<p><strong>center</strong>：伸缩项目向一行的中间位置靠齐。</p>
+<p><strong>space-between</strong>：伸缩项目会平均地分布在行里。第一个伸缩项目一行中的最开始位置，最后一个伸缩项目在一行中最终点位置。</p>
+<p><strong>space-around</strong>：伸缩项目会平均地分布在行里。<br><img src="http://7xjsho.com1.z0.glb.clouddn.com/justify-content.svg" alt="justify-content"></p>
+<pre><code>align-items: flex-start |<span class="string"> flex-end </span>|<span class="string"> center </span>|<span class="string"> baseline </span>|<span class="string"> stretch;</span>
+</code></pre><p><strong>flex-start</strong>: cross-start margin edge of the items is placed on the cross-start line</p>
+<p><strong>flex-end</strong>: cross-end margin edge of the items is placed on the cross-end line</p>
+<p><strong>center</strong>: items are centered in the cross-axis</p>
+<p><strong>baseline</strong>: items are aligned such as their baselines align</p>
+<p><strong>stretch (default)</strong>: stretch to fill the container (still respect min-width/max-width)<br><img src="http://7xjsho.com1.z0.glb.clouddn.com/align-items.svg" alt="align-items"></p>
+<pre><code>align-content: flex-<span class="operator"><span class="keyword">start</span> | flex-<span class="keyword">end</span> | center | <span class="keyword">space</span>-<span class="keyword">between</span> | <span class="keyword">space</span>-around | stretch;</span> 
+</code></pre><p><strong>注：本属性在只有一行的伸缩容器上无效</strong></p>
+<p><strong>flex-start</strong>：各行向伸缩容器的起点位置堆叠。</p>
+<p><strong>flex-end</strong>：各行向伸缩容器的结束位置堆叠。</p>
+<p><strong>center</strong>：各行向伸缩容器的中间位置堆叠。</p>
+<p><strong>space-between</strong>：各行在伸缩容器中平均分布。</p>
+<p><strong>space-around</strong>：各行在伸缩容器中平均分布，在两边各有一半的空间。</p>
+<p><strong>stretch（默认值）</strong>：各行将会伸展以占用剩余的空间。<br><img src="http://7xjsho.com1.z0.glb.clouddn.com/align-content.svg" alt="align-content"></p>
+<h2 id="应用在子元素上：">应用在子元素上：</h2><pre><code><span class="rule"><span class="attribute">order</span>:<span class="value">&lt;integer&gt;</span></span>;
+</code></pre><p>默认情况下，伸缩项目是按照文档流出现先后顺序排列。而“order”属性可以控制伸缩项目在他们的伸缩容器出现的顺序<br><img src="http://7xjsho.com1.z0.glb.clouddn.com/order.svg" alt="order"></p>
+<pre><code><span class="rule"><span class="attribute">flex-grow</span>:<span class="value"> &lt;number&gt;</span></span>; <span class="comment">/* default 0 */</span>
+</code></pre><p>定义伸缩项目的扩展能力。它接受一个不带单位的值做为一个比例。主要用来决定伸缩容器应该占据容器中多少<strong>可用空间</strong></p>
+<p>如果所有伸缩项目的“flex-grow”设置了“1”，那么每个伸缩项目将占据相等的可用空间。如果你给其中一个伸缩项目设置了“flex-grow”值为“2”，那么这个伸缩项目所占可用空间是其他伸缩项目所占可用空间的两倍</p>
+<p><strong>负值同样有效</strong><br><img src="http://7xjsho.com1.z0.glb.clouddn.com/flex-grow.svg" alt="flex-grow"></p>
+<pre><code><span class="rule"><span class="attribute">flex-shrink</span>:<span class="value"> &lt;number&gt;</span></span>; <span class="comment">/* default 1 */</span>
+</code></pre><p>定义伸缩项目的收缩能力 <strong>负值有效</strong></p>
+<pre><code><span class="rule"><span class="attribute">flex-basis</span>:<span class="value"> &lt;length&gt; | auto</span></span>; <span class="comment">/* default auto */</span>
+</code></pre><p><strong>HTML:</strong></p>
+<pre><code><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">head</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">title</span>&gt;</span>Flex-basis<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">type</span>=<span class="value">"text/css"</span> <span class="attribute">href</span>=<span class="value">"test1.css"</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">body</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"flexbox"</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"item1"</span>&gt;</span>1<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"item2"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"item3"</span>&gt;</span>3<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"width:300px;background-color:#96f"</span><span class="value">\</span>&gt;</span>固定宽度300px<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre><p><strong>CSS:</strong></p>
+<pre><code><span class="class">.flexbox</span> <span class="rules">{
+    <span class="rule"><span class="attribute">display</span>:<span class="value"> flex</span></span>;
+    <span class="rule"><span class="attribute">flex-flow</span>:<span class="value"> row</span></span>;
+    <span class="rule"><span class="attribute">flex-wrap</span>:<span class="value"> nowrap</span></span>;
+    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">600px</span></span></span>;
+    <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">50px</span> auto</span></span>;
+    <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#9cf</span></span></span>;
+}</span>
+
+<span class="class">.flexbox</span> <span class="tag">div</span> <span class="rules">{
+    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100px</span></span></span>;
+}</span>
+
+<span class="class">.flexbox</span> <span class="class">.item1</span> <span class="rules">{
+    <span class="rule"><span class="attribute">flex</span>:<span class="value"> <span class="number">1</span></span></span>; <span class="comment">/* flex-grow: 1; */</span>
+    <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#f90</span></span></span>;
+}</span>
+
+<span class="class">.flexbox</span> <span class="class">.item2</span> <span class="rules">{
+    <span class="rule"><span class="attribute">flex</span>:<span class="value"> <span class="number">1</span></span></span>;
+    <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#936</span></span></span>;
+}</span>
+
+<span class="class">.flexbox</span> <span class="class">.item3</span> <span class="rules">{
+    <span class="rule"><span class="attribute">flex</span>:<span class="value"> <span class="number">1</span></span></span>;
+    <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#39c</span></span></span>;
+}</span>
+</code></pre><p>结果：<br><img src="http://7xjsho.com1.z0.glb.clouddn.com/flex-basis1.png" alt="flex-basis1"></p>
+<p>flex-basis： 用来设置「flex-basis」长度并指定伸缩基准值，也就是根据可伸缩比率计算出剩余空间的分布之前，伸缩项目主轴长度的起始数值，若在「flex」缩写省略了此部件，则「flex-basis」的指定值是长度零。 若「flex-basis」的指定值是「auto」，则伸缩基准值的指定值是元素主轴长度属性的值。（这个值可能是关键字「auto」，代表元素的长度取决于其内容。）</p>
+<p>即是说对子元素设置了flex-basis基准值，在计算剩余空间前，该项在基准值上进行伸缩，例如：将上述例子中第10行HTML代码，div元素加上属性style=”flex-basis:150px;”，结果如下：<br><img src="http://7xjsho.com1.z0.glb.clouddn.com/flex-basis2.png" alt="flex-basis2"></p>
+<p>未设基准值以前，1、2、3 三个元素的长度都是100px，也就是容器总宽度600px减去固定宽度300px后剩余300px再1:1:1进行伸缩的结果。</p>
+<p>设置第一个子元素flex-basis:150px;后，1、2、3三个元素的宽度分别为：200px、50px、50px。<br>在计算出剩余空间300px后，先算出每个元素的伸缩基准值(不写默认为0px)，剩余空间减去每个元素的伸缩基准值后的空间再按比例进行分配，所以上面的结果是：<br>300px-150px=150px，这150px按照1:1:1分配应该给1、2、3号元素各分50px，由于1号子元素的基准值是150px，所以1号元素的宽度为150+50=200px，2、3号元素为50+0=50px。</p>
+<pre><code>flex: none | <span class="annotation">[&lt;'flex-grow'&gt; &lt;'flex-shrink'&gt;? || &lt;'flex-basis'&gt;]</span>;
+</code></pre><p>是flex-grow flex-shrink flex-basis三个属性的缩写，flex-shrink和flex-basis可选。默认”0 1 auto”</p>
+<pre><code>align-self: auto |<span class="string"> flex-start </span>|<span class="string"> flex-end </span>|<span class="string"> center </span>|<span class="string"> baseline </span>|<span class="string"> stretch;</span>
+</code></pre><p>用来在单独的伸缩项目上覆写默认的对齐方式（或由aling-items设定的对齐方式）<br>属性值参见align-items<br><img src="http://7xjsho.com1.z0.glb.clouddn.com/align-self.svg" alt="align-self"></p>
+<h2 id="Demo">Demo</h2><p><strong>HTML:</strong></p>
+<pre><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"wrapper"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">header</span> <span class="attribute">class</span>=<span class="value">"header"</span>&gt;</span>Header<span class="tag">&lt;/<span class="title">header</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">article</span> <span class="attribute">class</span>=<span class="value">"main"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">p</span>&gt;</span>
+            Pellentesque habitant morbi tristique 
+            senectus et netus et malesuada fames ac 
+            turpis egestas. Vestibulum tortor quam, 
+            feugiat vitae, ultricies eget, tempor sit 
+            amet, ante. Donec eu libero sit amet quam 
+            egestas semper. Aenean ultricies mi vitae 
+            est. Mauris placerat eleifend leo.
+        <span class="tag">&lt;/<span class="title">p</span>&gt;</span>  
+      <span class="tag">&lt;/<span class="title">article</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">aside</span> <span class="attribute">class</span>=<span class="value">"aside aside-1"</span>&gt;</span>Aside 1<span class="tag">&lt;/<span class="title">aside</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">aside</span> <span class="attribute">class</span>=<span class="value">"aside aside-2"</span>&gt;</span>Aside 2<span class="tag">&lt;/<span class="title">aside</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">footer</span> <span class="attribute">class</span>=<span class="value">"footer"</span>&gt;</span>Footer<span class="tag">&lt;/<span class="title">footer</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre><p><strong>CSS:</strong></p>
+<pre><code><span class="class">.wrapper</span> <span class="rules">{
+    <span class="rule"><span class="attribute">display</span>:<span class="value"> -webkit-box</span></span>;
+    <span class="rule"><span class="attribute">display</span>:<span class="value"> -moz-box</span></span>;
+    <span class="rule"><span class="attribute">display</span>:<span class="value"> -ms-flexbox</span></span>;
+    <span class="rule"><span class="attribute">display</span>:<span class="value"> -webkit-flex</span></span>;
+    <span class="rule"><span class="attribute">display</span>:<span class="value"> flex</span></span>;
+    <span class="rule"><span class="attribute">-webkit-flex-flow</span>:<span class="value"> row wrap</span></span>;
+    <span class="rule"><span class="attribute">flex-flow</span>:<span class="value"> row wrap</span></span>;
+    <span class="rule"><span class="attribute">font-weight</span>:<span class="value"> bold</span></span>;
+    <span class="rule"><span class="attribute">text-align</span>:<span class="value"> center</span></span>;
+}</span>
+
+<span class="class">.wrapper</span> &gt; * <span class="rules">{
+    <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">10px</span></span></span>;
+    <span class="rule"><span class="attribute">flex</span>:<span class="value"> <span class="number">1</span> <span class="number">100%</span></span></span>;
+}</span>
+
+<span class="class">.header</span> <span class="rules">{
+    <span class="rule"><span class="attribute">background</span>:<span class="value"> tomato</span></span>;
+}</span>
+
+<span class="class">.footer</span> <span class="rules">{
+    <span class="rule"><span class="attribute">background</span>:<span class="value"> lightgreen</span></span>;
+}</span>
+
+<span class="class">.main</span> <span class="rules">{
+    <span class="rule"><span class="attribute">text-align</span>:<span class="value"> left</span></span>;
+    <span class="rule"><span class="attribute">background</span>:<span class="value"> deepskyblue</span></span>;
+}</span>
+
+<span class="class">.aside-1</span> <span class="rules">{
+    <span class="rule"><span class="attribute">background</span>:<span class="value"> gold</span></span>;
+}</span>
+
+<span class="class">.aside-2</span> <span class="rules">{
+    <span class="rule"><span class="attribute">background</span>:<span class="value"> hotpink</span></span>;
+}</span>
+
+<span class="at_rule">@<span class="keyword">media</span> all and (min-width: <span class="number">600px</span>) </span>{
+      <span class="class">.aside</span> <span class="rules">{
+        <span class="rule"><span class="attribute">flex</span>:<span class="value"> <span class="number">1</span> auto</span></span>;
+      }</span>
+}
+
+<span class="at_rule">@<span class="keyword">media</span> all and (min-width: <span class="number">800px</span>) </span>{
+      <span class="class">.main</span> <span class="rules">{
+        <span class="rule"><span class="attribute">flex</span>:<span class="value"> <span class="number">3</span> <span class="number">0px</span></span></span>;
+      }</span>
+
+    <span class="class">.aside-1</span> <span class="rules">{
+        <span class="rule"><span class="attribute">order</span>:<span class="value"> <span class="number">1</span></span></span>;
+    }</span>
+
+      <span class="class">.main</span> <span class="rules">{
+        <span class="rule"><span class="attribute">order</span>:<span class="value"> <span class="number">2</span></span></span>;
+      }</span>
+
+      <span class="class">.aside-2</span> <span class="rules">{
+        <span class="rule"><span class="attribute">order</span>:<span class="value"> <span class="number">3</span></span></span>;
+      }</span>
+
+      <span class="class">.footer</span> <span class="rules">{
+        <span class="rule"><span class="attribute">order</span>:<span class="value"> <span class="number">4</span></span></span>;
+      }</span>
+}
+
+<span class="tag">body</span> <span class="rules">{
+      <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">2em</span></span></span>;
+}</span>
+</code></pre><p>结果如下：</p>
+<p>width &lt; 600px<br><img src="http://7xjsho.com1.z0.glb.clouddn.com/flex-demo1.png" alt="width &lt; 600px"></p>
+<hr>
+<p>600px &lt; width &lt; 800px<br><img src="http://7xjsho.com1.z0.glb.clouddn.com/flex-demo2.png" alt="600px &lt; width &lt; 800px"></p>
+<hr>
+<p>width &gt; 800px<br><img src="http://7xjsho.com1.z0.glb.clouddn.com/flex-demo3.png" alt="width &gt; 800px"></p>
+<p><strong>参见：</strong></p>
+<ul>
+<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="external">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a></li>
+<li><a href="http://www.w3cplus.com/css3/a-guide-to-flexbox-new.html" target="_blank" rel="external">http://www.w3cplus.com/css3/a-guide-to-flexbox-new.html</a></li>
+</ul>
   
 	</div>
 			       
@@ -120,9 +319,9 @@ flex-direction: row | row-reverse | column | column-reverse;
 </div>  
     </div>
     <footer><div id="footer" >
-	<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">Hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
+	<p class="copyright"><span class="power">Powered by </span><a href="http://hexo.io" target="_blank" title="hexo">Hexo</a> <i class="fa fa-copyright"></i> 2015 
 	
-	<a href="http://yoursite.com" target="_blank" title="Yang Shaoyue">Yang Shaoyue</a>
+	<span>Yang Shaoyue</span>
 	
 	</p>
 </div></footer>

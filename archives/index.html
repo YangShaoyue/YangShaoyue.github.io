@@ -23,52 +23,57 @@
     
     <link rel="stylesheet" href="/css/font-awesome-4.3.0/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="/css/diy.css" type="text/css">
+    <link rel="stylesheet" href="/css/markdown.css" type="text/css">
 </head>
 
     <body>
       <header>
-        <div>
-		
-			<div id="avatar">
-				<a href="/"><img src="/img/me.jpg" alt="Yang Shaoyue" title="Yang Shaoyue"/></a>
-				<a href="/"><img src="/img/avatar.jpg" alt="Yang Shaoyue" title="Yang Shaoyue"/></a>
-			</div>
+        <div class="nav-wrapper">
+	
+	<div id="avatar">
+		<a href="/"><img src="/img/me.jpg" alt="Yang Shaoyue" title="Yang Shaoyue"/></a>
+		<a href="/"><img src="/img/avatar.jpg" alt="Yang Shaoyue" title="Yang Shaoyue"/></a>
+	</div>
+	
+	<div id="author">
+		<h1 class="site-name"><a href="/" title="Yang Shaoyue">Yang Shaoyue</a></h1>
+		<h2 class="blog-motto">no path but through</h2>
+	</div>
+	<div class="social-wrapper">
+		<div class="social-font clearfix">
 			
-			<div id="author">
-				<h1 class="site-name"><a href="/" title="Yang Shaoyue">Yang Shaoyue</a></h1>
-				<h2 class="blog-motto">no path but through</h2>
-			</div>
-			<div class="social-wrapper">
-				<div class="social-font clearfix">
-					
-					<a href="https://github.com/YangShaoyue" target="_blank" title="github"><i class="fa fa-github"></i></a>
-					
-					
-					<a href="https://zhihu.com/people/feng-qi-ru-meng" target="_blank" title="zhihu"><i class="fa fa-paw"></i></a>
-					
-					
-					<a href="https://zhihu.com/people/feng-qi-ru-meng" target="_blank" title="wechat"><i class="fa fa-weixin"></i></a>
-						
-				</div>
-			</div>
+			<a href="https://www.github.com/YangShaoyue" target="_blank" title="github"><i class="fa fa-github"></i></a>
 			
-			<nav id="nav-bar">
-				<ul>
-					
-						<li><a data-pjax href="/">Home</a></li>
-					
-						<li><a data-pjax href="/categories/javascript/">JavaScript</a></li>
-					
-						<li><a data-pjax href="/categories/css/">CSS</a></li>
-					
-						<li><a data-pjax href="/categories/library/">Library</a></li>
-					
-						<li><a data-pjax href="/categories/music/">Music</a></li>
-					
-				</ul>
-			</nav>			
+			
+			<a href="https://www.zhihu.com/people/feng-qi-ru-meng" target="_blank" title="zhihu"><i class="fa fa-paw"></i></a>
+			
+			
+			<a href="https://www.zhihu.com/people/feng-qi-ru-meng" target="_blank" title="wechat"><i class="fa fa-weixin"></i></a>
+				
+		</div>
+	</div>
+			
+	<nav id="nav-bar">
+		<ul>
+			
+				<li><a data-pjax href="/">Home</a></li>
+			
+				<li><a data-pjax href="/categories/javascript/">JavaScript</a></li>
+			
+				<li><a data-pjax href="/categories/css/">CSS</a></li>
+			
+				<li><a data-pjax href="/categories/library/">Library</a></li>
+			
+				<li><a data-pjax href="/categories/music/">Music</a></li>
+			
+		</ul>
+	</nav>			
 </div>
-
+<div id="toggle">
+	<span class="top bar"></span>
+	<span class="middle bar"></span>
+	<span class="bottom bar"></span>
+</div>
       </header>
       <div id="container">
         
@@ -87,13 +92,17 @@
 
   
     
-      <div class="excerpt" itemprop="description2" ><p>:before :after作用：It creates a  phoney element and inserts it before or after the content of the element that you’ve targeted.</p>
-<p> 1 #example:before {<br> 2     content: “#”;<br> 3 }<br> 4<br> 5 #example:after {<br> 6     content: “.”;<br> 7 } </p>
-<ol>
-<li><p>we’re targeting the same element using #example:before and #example:after. Strictly speaking, they’re the pseudo-elements in the code.</p>
-</li>
-<li><p>Without the content property, pseudo-elements are useless. So while the pseudo-element selector itself is needed to target the element, you won’t be able to insert anything without adding the content property.</p>
-</li>
+      <div class="excerpt" itemprop="description2" ><p><strong>:before :after</strong>：It creates a  phoney element and inserts it before or after the content of the element that you’ve targeted.</p>
+<pre><code><span class="id">#example</span><span class="pseudo">:before</span> <span class="rules">{
+    <span class="rule"><span class="attribute">content</span>:<span class="value"> <span class="string">"#"</span></span></span>;
+}</span>
+
+<span class="id">#example</span><span class="pseudo">:after</span> <span class="rules">{
+    <span class="rule"><span class="attribute">content</span>:<span class="value"> <span class="string">"."</span></span></span>;
+}</span> 
+</code></pre><ol>
+<li>we’re targeting the same element using <code>#example:before</code> and <code>#example:after</code>. Strictly speaking, they’re the pseudo-elements in the code.</li>
+<li>Without the <strong>content</strong> property, pseudo-elements are useless. So while the pseudo-element selector itself is needed to target the element, you won’t be able to insert anything without adding the content property.</li>
 </ol>
 <p>You could leave the content property empty and just treat the pseudo-element like a content-less box, like this:<br></div>
       
@@ -139,9 +148,9 @@
 </div>
       </div>
       <footer><div id="footer" >
-	<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">Hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
+	<p class="copyright"><span class="power">Powered by </span><a href="http://hexo.io" target="_blank" title="hexo">Hexo</a> <i class="fa fa-copyright"></i> 2015 
 	
-	<a href="http://yoursite.com" target="_blank" title="Yang Shaoyue">Yang Shaoyue</a>
+	<span>Yang Shaoyue</span>
 	
 	</p>
 </div></footer>
