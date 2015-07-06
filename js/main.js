@@ -187,12 +187,7 @@ if (smallScreen) {
 // pjax
 $(document).pjax('a[data-pjax]', '#container', { fragment: '#container', timeout: 10000 });
 $(document).on({
-	'pjax:start': function() {
-		$("#container").fadeOut(500);
-	},
-
 	'pjax:end': function() {
-		$("#container").fadeIn(500);
 		paginatorModify();
 		afterPjax();
 	}
