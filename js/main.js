@@ -63,8 +63,8 @@ $(document).ready(function() {
 
 	// 导航栏被点击时，改变导航栏颜色
 	$("nav#nav-bar ul li").click(function() {
-		$(this).siblings('.active').removeClass('active');
-		$(this).addClass('active');
+		$(this).siblings(".active").removeClass("active");
+		$(this).addClass("active");
 	});
 });
 
@@ -79,13 +79,13 @@ $(document).ready(function() {
 		if (navLi[i].nodeType == 1) {
 			navLi[i].addEventListener("click", function() {
 				// 点击导航栏之前判断动画是否已触发（即h1是否还存在）
-				if (document.getElementsByClassName('site-name')[0]) {
+				if (document.getElementsByClassName("site-name")[0]) {
 					animationTrigger();
 				}
 			}, true);
 		}
 	}
-})();
+}());
 // wasTriggered();
 
 function paginatorModify() {
@@ -93,7 +93,7 @@ function paginatorModify() {
 	$("nav#page-nav a").attr("data-pjax", "");
 
 	// 插入含有当前文章页面总数的span节点
-	var pageNumber = document.getElementsByClassName('page-number').length;
+	var pageNumber = document.getElementsByClassName("page-number").length;
 	var separator = "/";
 	$("nav#page-nav span.page-number").after("<span class='total'></span>");
 	$("nav#page-nav span.page-number").after("<span class='separator'></span>");
@@ -176,7 +176,7 @@ function toggleSidebar() {
 }
 
 if (smallScreen) {
-	$("nav#nav-bar").css('height', smallScreenHeight);
+	$("nav#nav-bar").css("height", smallScreenHeight);
 
 	var $sep = "<div class='separator'></div>";
 	$("header div.nav-wrapper").append($sep);

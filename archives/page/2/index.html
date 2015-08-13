@@ -31,8 +31,8 @@
         <div class="nav-wrapper">
 	
 	<div id="avatar">
-		<a href="/"><img src="/img/me.jpg" alt="Yang Shaoyue" title="Yang Shaoyue"/></a>
-		<a href="/"><img src="/img/avatar.jpg" alt="Yang Shaoyue" title="Yang Shaoyue"/></a>
+		<a href="/"><img src="/img/me.jpg" alt="Yang Shaoyue" width="240px" height="240px"/></a>
+		<a href="/"><img src="/img/avatar.jpg" alt="Yang Shaoyue" width="240px" height="240px"/></a>
 	</div>
 	
 	<div id="author">
@@ -81,6 +81,29 @@
 <div id="main" class="archive-part clearfix">
   <div id="archive-page">
   
+  <section class="post library" itemscope itemprop="blogPost">
+  <h1 class="article-title" itemprop="name">
+    
+    <a data-pjax href="/2015/06/20/jQuery中attr和prop方法的区别/" title="jQuery中attr和prop方法的区别" itemprop="url">
+    
+    jQuery中attr和prop方法的区别
+    </a>  
+  </h1>
+
+  
+    
+      <div class="excerpt" itemprop="description2" ><p>大家都知道有的浏览器只要写disabled，checked就可以了，而有的要写成disabled = “disabled”，checked=”checked”，比如用attr(“checked”)获取checkbox的checked属性时选中的时候可以取到值,值为”checked”但没选中获取值就是undefined。<br>jq提供新的方法“prop”来获取这些属性，就是来解决这个问题的，以前我们使用attr获取checked属性时返回”checked”和””,现在使用prop方法获取属性则统一返回true和false。<br></div>
+      
+        <a class="article-more-link" data-pjax href="/2015/06/20/jQuery中attr和prop方法的区别/#more">
+          <i class="fa fa-arrow-right"></i>
+          <span>Read More</span>
+        </a>
+      
+    
+  
+  <time datetime="2015-06-20T11:17:49.000Z" itemprop="datePublished">Jun 20 2015</time>
+</section>
+
   <section class="post javascript" itemscope itemprop="blogPost">
   <h1 class="article-title" itemprop="name">
     
@@ -104,39 +127,9 @@
   <time datetime="2015-06-20T11:12:37.000Z" itemprop="datePublished">Jun 20 2015</time>
 </section>
 
-  <section class="post css" itemscope itemprop="blogPost">
-  <h1 class="article-title" itemprop="name">
-    
-    <a data-pjax href="/2015/06/20/Flex布局/" title="Flex布局" itemprop="url">
-    
-    Flex布局
-    </a>  
-  </h1>
-
-  
-    
-      <div class="excerpt" itemprop="description2" ><h2 id="应用在容器元素上:">应用在容器元素上:</h2><pre><code><span class="rule"><span class="attribute">display</span>:<span class="value">flex</span></span>; <span class="comment">/* inline-flex */</span>
-</code></pre><p>CSS的columns属性在容器上无效</p>
-<pre><code>flex-direction:row |<span class="string"> row-reverse </span>|<span class="string"> column </span>|<span class="string"> column-reverse</span>
-</code></pre><p>用来创建主轴，从而定义了伸缩项目放置在容器中的方向</p>
-<p><strong>row(默认)</strong>：在“ltr”排版方式下从左向右排列；在“rtl”排版方式下从右向左排列</p>
-<p><strong>row-reverse</strong>：与row排列方向相反</p>
-<p><strong>column</strong>：类似于row，不过是从上到下排列</p>
-<p><strong>column-reverse</strong>：与column排列方向相反<br></div>
-      
-        <a class="article-more-link" data-pjax href="/2015/06/20/Flex布局/#more">
-          <i class="fa fa-arrow-right"></i>
-          <span>Read More</span>
-        </a>
-      
-    
-  
-  <time datetime="2015-06-20T11:08:32.000Z" itemprop="datePublished">Jun 20 2015</time>
-</section>
-
 
   <nav id="page-nav" class="clearfix archive-nav">
-    <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/3/">Next &raquo;</a>
+    <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/3/">Next &raquo;</a>
   </nav>
 
   </div>

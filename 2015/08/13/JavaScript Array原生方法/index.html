@@ -9,10 +9,14 @@
     
     <meta name="author" content="Yang Shaoyue">
     
-    <meta name="description" content="是不是 每种感情都不容沉溺放肆交心淡如君子只道是 那些无关风花雪月的相思说来几人能知院内冬初昔年与你栽的桃树叶落早做尘土新雪来时 又将陈酒埋了几壶盼你归来后对酌
-穿过落雁修竹 看过月升日暮你说有一日总会名扬天下实现你抱负那时低头替你剑穗缠着新流苏心愿未听清楚">
+    <meta name="description" content="join()：将数组中的所有元素都转化为字符串并连接在一起，返回最后生成的字符串。
+split()： join()方法的逆操作。将字符串分割成若干块来创建一个数组。
+reverse()：将数组中的元素颠倒顺序，返回逆序的数组。会在原数组上修改。
+sort()：将数组中的元素排序，并返回排序后的数组
+concat()：创建并返回一个新数组，它的元素包括调用concat()的原始数组的元素和concat()的每个参数。
+slice()：返回指定数组的一个片段或子数组。">
     
-    <meta name="keywords" content="music">
+    <meta name="keywords" content="javascript">
     
     
     
@@ -78,21 +82,40 @@
     </header>
     <div id="container">
       <div id="main" class="post" itemscope itemprop="blogPost">
-	<article class="music" itemprop="articleBody"> 
+	<article class="javascript" itemprop="articleBody"> 
 		<header class="article-info clearfix">
   <h1 itemprop="name">
-    眉间雪
+    JavaScript Array原生方法
   </h1>
   <p class="article-time">
     <i class="fa fa-clock-o"></i>
-    <time datetime="2015-06-13T01:24:14.000Z" itemprop="datePublished">Jun 13 2015</time>
+    <time datetime="2015-08-13T14:59:56.897Z" itemprop="datePublished">Aug 13 2015</time>
   </p>
 </header>
 	<div class="article-content">
 		
 		
-		<p>是不是 每种感情都不容沉溺放肆<br>交心淡如君子<br>只道是 那些无关风花雪月的相思<br>说来几人能知<br>院内冬初昔年与你栽的桃树<br>叶落早做尘土<br>新雪来时 又将陈酒埋了几壶<br>盼你归来后对酌</p>
-<p>穿过落雁修竹 看过月升日暮<br>你说有一日总会名扬天下实现你抱负<br>那时低头替你剑穗缠着新流苏<br>心愿未听清楚<br><a id="more"></a><br>还挂着流苏 是否应该满足<br>也为你缝好冬衣寄去书信一两句叮嘱<br>该庆幸至远至疏你我还未至陌路<br>是时光从来残酷<br>最害怕 酒肆闲谈时候听见你名字<br>语气七分熟识<br>回过神 笑问何方大侠姓名竟不知<br>笑容有多讽刺<br>斟酒独酌 细雪纷纷覆上眉目<br>清寒已然入骨<br>还忆最初 有你扯过衣袖轻拂<br>笑说雪融似泪珠<br>曾经相伴相护 说着初心不负<br>想起某一日陪你策马同游闹市中漫步<br>那时正逢扬州三月桃花铺满路<br>神情难免恍惚<br>江湖的尽头是否只剩孤独<br>都怪我玲珑心思执念太过以尘网自缚<br>前方太辽阔若问此去应去向何处<br>把来路当做归途<br>桃树下 那年落雪为你唱一段乐府<br>信了人不如故<br>只如今茫茫大雪之中等着谁回顾<br>明知无人回顾<br>谁能初心不负</p>
+		<p><strong>join()：</strong>将数组中的所有元素都转化为字符串并连接在一起，返回最后生成的字符串。</p>
+<p><strong>split()：</strong> join()方法的逆操作。将字符串分割成若干块来创建一个数组。</p>
+<p><strong>reverse()：</strong>将数组中的元素颠倒顺序，返回逆序的数组。会在原数组上修改。</p>
+<p><strong>sort()：</strong>将数组中的元素排序，并返回排序后的数组</p>
+<p><strong>concat()：</strong>创建并返回一个新数组，它的元素包括调用concat()的原始数组的元素和concat()的每个参数。</p>
+<p><strong>slice()：</strong>返回指定数组的一个片段或子数组。<br><a id="more"></a><br><strong>splice()：</strong>在数组中插入或删除元素的通用方法，此方法会修改调用的数组。</p>
+<p><strong>push()：</strong>在数组的尾部添加一个或多个元素，并返回数组新的长度。</p>
+<p><strong>pop()：</strong>删除数组的最后一个元素，减小数组长度并返回它删除的值。</p>
+<p><strong>unshift()：</strong>在数组的头部添加一个或多个元素，并将已存在的元素移动到更高位置的索引来获得足够的空间，最后返回数组新的长度。</p>
+<p><strong>shift()：</strong>删除数组的第一个元素并将其返回，然后把所有随后的元素下移一个位置来填补数组头部的空缺。</p>
+<p><strong>toString()：</strong>将数组的每个元素转化为字符串（如有必要将调用元素的toString()方法）并且输出用逗号分隔的字符串列表。</p>
+<p><strong>toLocalString()：</strong> toString()的本地化版本。</p>
+<p><strong>forEach()：</strong>从头至尾遍历数组，为每个元素调用指定的函数。</p>
+<p><strong>map()：</strong>对数组中每一项运行给定的函数，返回每次函数调用的结果组成的数组。</p>
+<p><strong>filter()：</strong>对数组中每一项运行给定的函数，返回该函数会返回true的项组成的数组。</p>
+<p><strong>every()：</strong>对数组中每一项运行给定的函数，如果该函数对每一项都返回true，则返回true。</p>
+<p><strong>some()：</strong>对数组中每一项运行给定的函数，如果该函数对任一项返回true，则返回true。</p>
+<p><strong>reduce()：</strong>使用指定的函数将数组元素进行组合，生成单个值。按照数组索引从低到高处理数组。</p>
+<p><strong>reduceRight()：</strong>和reduce()原理一样，不同的是它按照数组索引从高到低处理数组。</p>
+<p><strong>indexOf()：</strong>从头至尾搜索整个数组中具有给定值的元素，返回找到的第一个元素的索引，没有找到则返回-1。</p>
+<p><strong>lastIndexOf()：</strong>从尾至头搜索整个数组中具有给定值的元素，返回找到的第一个元素的索引，没有找到则返回-1。</p>
   
 	</div>
 			       
@@ -100,15 +123,9 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a data-pjax href="/2015/06/20/Flex布局/" title="Flex布局">
-  <i class="fa fa-angle-left fa-9x"></i>
-</a>
-</div>
-
 
 <div class="next">
-<a data-pjax href="/2015/06/12/CSS属性/"  title="CSS属性">
+<a data-pjax href="/2015/06/20/before和-after伪元素/"  title=":before和:after伪元素">
  <i class="fa fa-angle-right fa-9x"></i>
 </a>
 </div>
